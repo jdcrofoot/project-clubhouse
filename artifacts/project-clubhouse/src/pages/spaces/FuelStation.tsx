@@ -4,7 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Coffee, Zap, CheckCircle2 } from "lucide-react";
 import { Link } from "wouter";
-import imgFuelStation from "@assets/generated_images/vision_board_fuel_station_v4.png";
+import imgFuelStation from "@assets/generated_images/fuel_station_v1_1.png";
 
 export default function FuelStation() {
   useEffect(() => {

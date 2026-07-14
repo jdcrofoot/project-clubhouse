@@ -1,0 +1,201 @@
+Restore the Original Vision Boards and Update Representation Only
+
+Please revert the Project Clubhouse vision boards to the original visual designs and compositions.
+
+The original boards are the preferred source of truth. They had the right:
+
+Black background
+Industrial architecture
+Lime-green accent color
+Bold, condensed typography
+Dark cinematic lighting
+Layout and information hierarchy
+Architectural concept-board feel
+Sportsbook-inspired Clubhouse atmosphere
+Performance-focused gym floor
+Affordable, self-service Fuel Station
+Outdoor patio concept
+Overall premium-but-accessible tone
+
+The recent revisions changed too many elements. Do not redesign or reinterpret the boards.
+
+Primary instruction
+
+Keep the original vision boards intact and change only the people shown in the imagery.
+
+Preserve:
+
+The exact layout
+The main hero composition
+Titles and text placement
+Fonts and typography styles
+Color palette
+Icons
+Supporting image positions
+Lighting and architectural materials
+Key features
+Questions for Grant
+Original design intent
+Existing sportsbook feel in the Clubhouse
+The balance between physical fitness and community
+
+Do not introduce a new visual system.
+
+Representation updates
+
+Replace selected people within the original scenes so that the community appears more naturally representative.
+
+Include a balanced mix of:
+
+Male and female members
+Teenagers
+College-age members
+Young adults
+Parents and adults
+Different ethnic backgrounds
+Different body types
+Beginners and experienced athletes
+
+Women and girls should be active participants, not only background characters. Show them:
+
+Strength training
+Using functional equipment
+Studying
+Watching sports
+Socializing
+Using the Fuel Station
+Checking leaderboards
+Celebrating progress
+Using PrimalTrack
+
+Keep teenagers and young adults central because they remain the primary target audience, but avoid making the club appear exclusively male or exclusively for elite athletes.
+
+Preserve the original mood
+
+The people should appear:
+
+Authentic
+Engaged
+Athletic but not all fitness models
+Comfortable in the space
+Naturally interacting
+Focused on progress
+Supportive of one another
+
+Avoid staged stock-photo poses or groups smiling directly at the camera.
+
+Board-specific direction
+Arrival Experience
+
+Preserve the original leaderboard wall, check-in area, industrial lobby, and energetic entrance.
+
+Adjust the people to show a mix of male and female teenagers, young adults, and a few parents. Show friends arriving together and members noticing the leaderboard.
+
+The Clubhouse
+
+Preserve the original dark sportsbook-inspired environment:
+
+Multiple large sports screens
+Comfortable lounge seating
+Community tables
+Warm industrial lighting
+Sports-viewing atmosphere
+
+Do not turn it into a generic café, gaming lounge, or family restaurant.
+
+Gaming and merchandise are undecided and should be removed or minimized.
+
+Update the people so the Clubhouse includes:
+
+Male and female teens
+College students
+Young adults
+Parents
+Small groups watching sports
+Students doing homework
+Friends talking over protein shakes
+
+The main identity should remain sportsbook atmosphere without gambling or alcohol.
+
+Performance Floor
+
+Preserve the original layout, racks, turf lane, dark aesthetic, digital leaderboard, and performance atmosphere.
+
+Add more female athletes and a broader mix of ages and experience levels while retaining the serious training energy.
+
+Show:
+
+Female and male lifters
+Beginners receiving guidance
+Experienced members
+Functional training
+Friends encouraging one another
+Progress and personal records
+
+Do not make the floor look like a group-fitness studio or luxury wellness club.
+
+Fuel Station
+
+Preserve the original self-service protein dispensers, vending, refrigerators, communal table, dark finishes, and approximately $2 protein concept.
+
+Update only the members shown using the space.
+
+Include teens, college students, women, men, and an occasional parent. Maintain the affordable, fast, self-service feeling.
+
+Outdoor Patio
+
+Preserve the original:
+
+Large sports screen
+Fire features
+String lights
+Relaxed seating
+Dining tables
+Small basketball court separated from the lounge area
+
+Update the people to show a broader community while keeping teens and young adults central.
+
+App and Motivation Engine
+
+Preserve the original board composition and phone mockups.
+
+Where profile images, leaderboard names, or achievement examples appear, include a balanced mix of genders, ages, and backgrounds.
+
+Continue emphasizing:
+
+Progress rather than raw strength
+Most improved
+Consistency
+Community participation
+First milestones
+Local, regional, and national rankings
+Remove or minimize
+
+Unless already essential to an original board, remove or minimize:
+
+Dedicated gaming areas
+Merchandise-focused imagery
+Esports styling
+Script or handwritten sports-bar fonts
+Generic promotional slogans placed over the imagery
+New layouts that replace the architectural board format
+Excessive staged lifestyle photography
+Quality-control rule
+
+Before changing any board, compare it directly against the original.
+
+The revised version should look like the same vision board photographed with a more representative group of members, not like a newly designed board.
+
+Name the revised files:
+
+Arrival Experience v1.1
+The Clubhouse v1.1
+Performance Floor v1.1
+Fuel Station v1.1
+Outdoor Patio v1.1
+App Experience v1.1
+Motivation Engine v1.1
+
+Keep the original files unchanged for comparison and rollback.
+
+That is the safest direction: restore first, then selectively replace people without touching the design DNA.

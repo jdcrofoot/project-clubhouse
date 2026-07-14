@@ -30,13 +30,13 @@ import { Navbar } from "@/components/Navbar";
 import { Link } from "wouter";
 
 import imgHero from "@assets/generated_images/hero_gym_sportsbook.png";
-import imgPerformanceFloor from "@assets/generated_images/vision_board_performance_floor_v4.png";
-import imgClubhouse from "@assets/generated_images/vision_board_clubhouse_v4.png";
-import imgFuelStation from "@assets/generated_images/vision_board_fuel_station_v4.png";
-import imgOutdoorPatio from "@assets/generated_images/vision_board_outdoor_patio_v4.png";
-import imgAppInfo from "@assets/generated_images/vision_board_app_v2.png";
-import imgSupport1 from "@assets/ChatGPT_Image_Jul_14,_2026,_12_50_52_PM_1784052604353.png";
-import imgSupport2 from "@assets/ChatGPT_Image_Jul_14,_2026,_12_50_45_PM_1784052604353.png";
+import imgPerformanceFloor from "@assets/generated_images/performance_floor_v1_1.png";
+import imgClubhouse from "@assets/generated_images/clubhouse_v1_1.png";
+import imgFuelStation from "@assets/generated_images/fuel_station_v1_1.png";
+import imgOutdoorPatio from "@assets/generated_images/outdoor_patio_v1_1.png";
+import imgAppInfo from "@assets/generated_images/app_experience_v1_1.png";
+import imgSupport1 from "@assets/generated_images/arrival_experience_v1_1.png";
+import imgSupport2 from "@assets/generated_images/app_experience_v1_1.png";
 import imgSupport3 from "@assets/ChatGPT_Image_Jul_14,_2026,_12_50_33_PM_1784052604354.png";
 
 // ─── Hero ────────────────────────────────────────────────────────────────────
