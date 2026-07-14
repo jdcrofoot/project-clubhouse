@@ -1,0 +1,316 @@
+We've made tremendous progress on the visual design. The website is beginning to feel like a real company instead of just a concept.
+
+Do not redesign the visual identity. The current aesthetic (black background, neon green accents, bold typography, industrial feel) is the direction we want to continue.
+
+Instead, I want to evolve the site from a gym landing page into a product experience that communicates why Project Clubhouse is fundamentally different.
+
+Overall Goal
+
+Someone visiting the website should understand within 30 seconds that:
+
+This is NOT another gym.
+This is a fitness community.
+The physical club and the app work together.
+Members are rewarded for progress, consistency, and community—not just strength.
+This is a place where people belong.
+1. Keep the Hero Section
+
+Keep the existing hero almost exactly as it is.
+
+I like:
+
+Strong typography
+Dark aesthetic
+Green accent color
+"Stronger Together"
+Overall energy
+
+However, experiment with subtitles that emphasize belonging and progress instead of simply fitness.
+
+Examples:
+
+"Where Progress Beats Perfection."
+
+"The First Fitness Club Built Around Community."
+
+"Build Strength. Build Friendships. Build Your Future."
+
+Do not drastically redesign this section.
+
+2. Add a New Section Immediately After the Hero
+
+Create a section titled:
+
+More Than A Gym
+
+Use one of our clubhouse concept renderings.
+
+Explain visually that members can:
+
+Train
+Hang out
+Study
+Watch games
+Attend events
+Refuel
+Build friendships
+
+Avoid large paragraphs.
+
+Use icons and concise messaging.
+
+The goal is to immediately explain the value proposition.
+
+3. Create a "Why Members Stay" Section
+
+This should communicate our biggest differentiator.
+
+Instead of selling equipment, sell experiences.
+
+Examples:
+
+🏋️ Train Together
+
+📈 Track Progress
+
+🏆 Compete
+
+🥤 Refuel
+
+🎉 Attend Events
+
+🎬 Watch Games
+
+👥 Build Community
+
+Keep the layout modern and visual.
+
+4. Introduce PrimalTrack
+
+This should not look like a generic app section.
+
+Introduce it as:
+
+The Operating System Behind Every Member Journey
+
+Visually demonstrate a member journey.
+
+Example flow:
+
+Join Club
+
+↓
+
+Walk In
+
+↓
+
+Automatic Check-In
+
+↓
+
+Workout Logged
+
+↓
+
+Progress Updated
+
+↓
+
+Leaderboard Changes
+
+↓
+
+Rewards Earned
+
+↓
+
+Community Events
+
+↓
+
+Repeat
+
+This should reinforce that the app powers the club experience.
+
+5. Add a "Progress Wins" Section
+
+This may become one of the most important sections on the website.
+
+Explain that most fitness companies reward the strongest.
+
+Project Clubhouse rewards improvement.
+
+Create example cards like:
+
++18% Bench Improvement
+
+42 Day Workout Streak
+
+Community MVP
+
+First Pull-Up
+
+Most Improved This Month
+
+#2 Local Club
+
+Top 10 Minnesota
+
+National Leaderboard
+
+Parents should immediately understand that every member has a chance to succeed.
+
+6. Build a Leaderboard Visualization
+
+Create an interactive section demonstrating how leaderboards work.
+
+Show that rankings can exist across multiple levels.
+
+Example:
+
+Friends
+
+↓
+
+Local Club
+
+↓
+
+City
+
+↓
+
+State
+
+↓
+
+Region
+
+↓
+
+National
+
+Also demonstrate filtering by:
+
+Age
+
+Gender
+
+Weight Class
+
+Sport
+
+School
+
+Experience Level
+
+This should visually communicate inclusiveness rather than exclusivity.
+
+7. Explain Rewards
+
+Create a section titled:
+
+Progress Creates Rewards
+
+Illustrate examples such as:
+
+Protein Credits
+
+Membership Discounts
+
+Exclusive Events
+
+Badges
+
+Community Recognition
+
+Merchandise
+
+Show that consistency earns tangible benefits.
+
+8. Improve Navigation
+
+Eventually transition navigation toward:
+
+Experience
+
+The Club
+
+PrimalTrack
+
+Community
+
+Membership
+
+This better reflects what we're actually building.
+
+9. Website Philosophy
+
+Do NOT build a traditional gym website.
+
+We are building a modern product website similar to companies like:
+
+Apple
+
+Nike
+
+Notion
+
+Whoop
+
+Oura
+
+The site should feel like a technology-enabled community brand.
+
+10. Design Principles
+
+Maintain:
+
+Black backgrounds
+
+Neon green accents
+
+Industrial architecture
+
+Simple layouts
+
+Large typography
+
+Premium but affordable
+
+Modern
+
+Authentic
+
+Do not introduce luxury finishes or overly polished health-club aesthetics.
+
+The feeling should be:
+
+"A place where ambitious people want to spend time."
+
+Final Direction
+
+Every page should answer one question:
+
+Why would someone choose to spend three hours here instead of one?
+
+Every section should reinforce that Project Clubhouse is not selling gym access.
+
+We are creating a community where people improve together.
+
+Build every future enhancement around that principle.
+
+One more idea I'd add
+
+I would also ask Replit to create a "Coming Soon" Founder Wall near the bottom of the site.
+
+Not for marketing—for momentum.
+
+Something like:
+
+We're building this together.
+
+This is Version 1 of Project Clubhouse. Over the coming months, we'll continue refining the club, the app, and the experience with input from future members, parents, athletes, and coaches.
+
+That small touch reinforces that this is a living project, and I think it fits perfectly with your plan to iterate alongside Grant. It also invites people into the journey rather than presenting the concept as finished.
