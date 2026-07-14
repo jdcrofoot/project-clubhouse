@@ -49,6 +49,21 @@ export default function FuelStation() {
         </div>
       </section>
 
+      {/* Photo Showcase */}
+      <section className="relative z-10 bg-black">
+        <div className="relative">
+          <img
+            src={imgFuelStation}
+            alt="Fuel Station Vision"
+            className="w-full max-h-[80vh] object-cover object-center"
+          />
+          <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between p-8 bg-gradient-to-t from-black/80 to-transparent">
+            <span className="font-display text-xs uppercase tracking-[0.3em] text-primary font-bold">Vision Board · Zone 03</span>
+            <span className="font-display text-xs uppercase tracking-widest text-white/50">The Fuel Station</span>
+          </div>
+        </div>
+      </section>
+
       {/* Content Section */}
       <section className="py-24 md:py-32 relative z-10 bg-background border-t border-primary/20">
         <div className="container mx-auto px-6 max-w-6xl">
