@@ -29,10 +29,11 @@ import {
 import { Navbar } from "@/components/Navbar";
 import { Link } from "wouter";
 
-import imgPerformanceFloor from "@assets/generated_images/vision_board_performance_floor_v3.png";
-import imgClubhouse from "@assets/generated_images/vision_board_clubhouse_v3.png";
-import imgFuelStation from "@assets/generated_images/vision_board_fuel_station_v3.png";
-import imgOutdoorPatio from "@assets/generated_images/vision_board_outdoor_patio_v3.png";
+import imgHero from "@assets/generated_images/hero_gym_sportsbook.png";
+import imgPerformanceFloor from "@assets/generated_images/vision_board_performance_floor_v4.png";
+import imgClubhouse from "@assets/generated_images/vision_board_clubhouse_v4.png";
+import imgFuelStation from "@assets/generated_images/vision_board_fuel_station_v4.png";
+import imgOutdoorPatio from "@assets/generated_images/vision_board_outdoor_patio_v4.png";
 import imgAppInfo from "@assets/generated_images/vision_board_app_v2.png";
 import imgSupport1 from "@assets/ChatGPT_Image_Jul_14,_2026,_12_50_52_PM_1784052604353.png";
 import imgSupport2 from "@assets/ChatGPT_Image_Jul_14,_2026,_12_50_45_PM_1784052604353.png";
@@ -47,7 +48,7 @@ const Hero = () => {
   return (
     <section className="relative h-[100dvh] flex items-center justify-center overflow-hidden bg-background">
       <motion.div style={{ y, opacity }} className="absolute inset-0 z-0">
-        <img src={imgPerformanceFloor} alt="Clubhouse Energy" className="w-full h-full object-cover opacity-40 mix-blend-luminosity grayscale contrast-125" />
+        <img src={imgHero} alt="Clubhouse Energy" className="w-full h-full object-cover opacity-40 mix-blend-luminosity grayscale contrast-125" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
         <div className="absolute inset-0 bg-background/20" />
       </motion.div>
