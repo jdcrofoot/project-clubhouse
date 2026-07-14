@@ -22,7 +22,8 @@ import {
   Gift,
   Ticket,
   ShoppingBag,
-  ChevronDown,
+  RefreshCw,
+  RotateCcw,
 } from "lucide-react";
 
 import { Navbar } from "@/components/Navbar";
@@ -80,7 +81,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
         >
-          <Button size="lg" className="text-xl md:text-2xl px-12 h-16 md:h-20" onClick={() => document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" })}>
+          <Button size="lg" className="text-xl md:text-2xl px-12 h-16 md:h-20" onClick={() => document.getElementById("membership")?.scrollIntoView({ behavior: "smooth" })}>
             CLAIM YOUR SPOT <ArrowRight className="ml-3 w-6 h-6 md:w-8 md:h-8" />
           </Button>
         </motion.div>
@@ -116,65 +117,92 @@ const Marquee = ({ text, reverse = false }: { text: string; reverse?: boolean })
   </div>
 );
 
-// ─── More Than A Gym ─────────────────────────────────────────────────────────
-const MoreThanAGym = () => {
-  const activities = [
-    { icon: <Dumbbell className="w-8 h-8" />, label: "Train", desc: "Real equipment. Real results." },
-    { icon: <Users className="w-8 h-8" />, label: "Hang Out", desc: "Lounge. Connect. Belong." },
-    { icon: <BookOpen className="w-8 h-8" />, label: "Study", desc: "Tables, Wi-Fi, good energy." },
-    { icon: <Tv className="w-8 h-8" />, label: "Watch Games", desc: "Big screens. Loud crowds." },
-    { icon: <CalendarDays className="w-8 h-8" />, label: "Attend Events", desc: "Competitions, nights, more." },
-    { icon: <Coffee className="w-8 h-8" />, label: "Refuel", desc: "$2 shakes. No excuses." },
-    { icon: <Heart className="w-8 h-8" />, label: "Build Friendships", desc: "The real reason you stay." },
+// ─── Chapter Divider ──────────────────────────────────────────────────────────
+const ChapterDivider = ({ num, title }: { num: string; title: string }) => (
+  <div className="flex items-center gap-6 px-6 md:px-12 py-5 border-y border-white/10 bg-secondary/40">
+    <span className="font-display text-xs md:text-sm text-primary tracking-[0.3em] font-black uppercase whitespace-nowrap">
+      Chapter {num}
+    </span>
+    <div className="flex-1 h-[1px] bg-white/10" />
+    <span className="font-display text-xs md:text-sm text-muted-foreground tracking-[0.2em] uppercase font-bold whitespace-nowrap">
+      {title}
+    </span>
+  </div>
+);
+
+// ─── Chapter 1: Why We Exist ──────────────────────────────────────────────────
+const WhyWeExist = () => {
+  const pillars = [
+    {
+      icon: <Heart className="w-10 h-10" />,
+      label: "Belonging",
+      desc: "Most people don't quit the gym because they stop wanting results. They quit because they never felt like they belonged. We fix that.",
+    },
+    {
+      icon: <TrendingUp className="w-10 h-10" />,
+      label: "Progress",
+      desc: "We don't reward the strongest. We reward the most improved. Every member — from first pull-up to first podium — has a shot at the top.",
+    },
+    {
+      icon: <Users className="w-10 h-10" />,
+      label: "Community",
+      desc: "Fitness brings you in. Community keeps you here. The friendships built inside this club are the real reason people stay for years.",
+    },
   ];
 
   return (
-    <section id="experience" className="py-24 md:py-40 bg-background relative z-10 border-b border-white/5">
+    <section id="why" className="py-24 md:py-40 bg-background relative z-10 border-b border-white/5">
       <div className="container mx-auto px-6">
+
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          className="mb-20 md:mb-32"
+          className="max-w-5xl mb-24 md:mb-40"
         >
-          <div className="inline-flex items-center gap-3 px-5 py-2 border border-primary/40 text-primary font-display text-sm tracking-widest uppercase font-bold mb-8">
-            <Zap className="w-4 h-4" /> The Concept
+          <div className="inline-flex items-center gap-3 px-5 py-2 border border-primary/40 text-primary font-display text-sm tracking-widest uppercase font-bold mb-10">
+            <Zap className="w-4 h-4" /> Why We Exist
           </div>
-          <h2 className="font-display text-6xl md:text-8xl lg:text-[9rem] font-black uppercase tracking-tighter leading-none mb-6">
-            More Than<br />
-            <span className="text-primary">A Gym.</span>
+          <h2 className="font-display text-5xl md:text-7xl lg:text-[8rem] font-black uppercase tracking-tighter leading-none mb-8">
+            Most Places<br />
+            Count Your Reps.<br />
+            <span className="text-primary">We Count Your Growth.</span>
           </h2>
-          <p className="text-xl md:text-3xl text-muted-foreground font-display tracking-widest uppercase max-w-2xl">
-            Why would someone choose to spend three hours here instead of one?
+          <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed max-w-3xl">
+            Project Clubhouse is not a gym. It is a community built around a single belief — that consistent momentum, real friendships, and a place where you feel you belong will change your life far more than any piece of equipment ever could.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 md:gap-6">
-          {activities.map((item, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24 md:mb-40">
+          {pillars.map((p, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
-              transition={{ delay: i * 0.07 }}
-              className="group flex flex-col items-center text-center p-6 md:p-8 bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 hover:bg-primary/5 cursor-default"
+              transition={{ delay: i * 0.15 }}
+              className="group p-10 md:p-12 bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 relative overflow-hidden"
             >
-              <div className="text-primary mb-4 group-hover:scale-125 transition-transform duration-300">
-                {item.icon}
+              <div className="absolute -right-6 -top-10 font-display text-[8rem] font-black text-white/3 pointer-events-none">
+                {String(i + 1).padStart(2, "0")}
               </div>
-              <h3 className="font-display text-xl md:text-2xl font-black uppercase tracking-tight mb-2 leading-none">{item.label}</h3>
-              <p className="text-muted-foreground text-sm font-light leading-snug hidden md:block">{item.desc}</p>
+              <div className="text-primary mb-8 group-hover:scale-110 transition-transform duration-300">
+                {p.icon}
+              </div>
+              <h3 className="font-display text-4xl md:text-5xl font-black uppercase tracking-tighter leading-none mb-4 group-hover:text-primary transition-colors">
+                {p.label}
+              </h3>
+              <p className="text-muted-foreground text-lg font-light leading-relaxed">{p.desc}</p>
             </motion.div>
           ))}
         </div>
 
-        {/* Supporting image */}
+        {/* Full-bleed quote image */}
         <motion.div
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ delay: 0.3 }}
-          className="mt-16 md:mt-24 relative overflow-hidden"
+          className="relative overflow-hidden"
         >
           <img
             src={imgClubhouse}
@@ -185,7 +213,7 @@ const MoreThanAGym = () => {
           <div className="absolute inset-0 flex items-center justify-center">
             <blockquote className="text-center px-6">
               <p className="font-display text-3xl md:text-5xl lg:text-7xl font-black uppercase tracking-tighter text-white leading-none">
-                "A place where ambitious<br />people want to spend time."
+                "Why would someone choose to<br />spend three hours here instead of one?"
               </p>
             </blockquote>
           </div>
@@ -195,68 +223,17 @@ const MoreThanAGym = () => {
   );
 };
 
-// ─── Why Members Stay ─────────────────────────────────────────────────────────
-const WhyMembersStay = () => {
-  const reasons = [
-    { emoji: "🏋️", label: "Train Together", desc: "Side-by-side with people who push you. No lone-wolf workouts." },
-    { emoji: "📈", label: "Track Progress", desc: "Every rep, every PR, every streak. PrimalTrack captures it all." },
-    { emoji: "🏆", label: "Compete", desc: "Leaderboards from friend groups to national rankings." },
-    { emoji: "🥤", label: "Refuel", desc: "Quality nutrition at minimum cost, right where you need it." },
-    { emoji: "🎉", label: "Attend Events", desc: "PR parties, club competitions, community nights. Always something happening." },
-    { emoji: "🎬", label: "Watch Games", desc: "Big screens. Full sound. The best living room you've ever had." },
-    { emoji: "👥", label: "Build Community", desc: "The friendships you build here outlast any workout." },
-  ];
-
-  return (
-    <section id="community" className="py-24 md:py-40 bg-secondary relative border-y border-white/5 overflow-hidden">
-      <div className="absolute inset-0 electric-grid opacity-10 pointer-events-none" />
-      <div className="container mx-auto px-6 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          className="text-center mb-20 md:mb-32"
-        >
-          <h2 className="font-display text-5xl md:text-8xl lg:text-[9rem] font-black uppercase tracking-tighter leading-none mb-6">
-            Why Members<br /><span className="text-primary">Stay.</span>
-          </h2>
-          <p className="text-xl md:text-3xl text-muted-foreground font-display tracking-widest uppercase max-w-2xl mx-auto">
-            We're not selling gym access. We're creating a community.
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {reasons.map((r, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ delay: i * 0.08 }}
-              className={`group p-8 md:p-10 bg-background border border-white/5 hover:border-primary/40 transition-all duration-300 ${i === 0 ? "lg:col-span-2 lg:row-span-1" : ""}`}
-            >
-              <div className="text-5xl mb-6">{r.emoji}</div>
-              <h3 className="font-display text-3xl md:text-4xl font-black uppercase tracking-tight mb-3 leading-none group-hover:text-primary transition-colors">{r.label}</h3>
-              <p className="text-muted-foreground text-lg font-light leading-relaxed">{r.desc}</p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-// ─── 4 Zones / Spaces ────────────────────────────────────────────────────────
+// ─── Chapter 2: The Experience (Spaces) ───────────────────────────────────────
 const Spaces = () => {
   const spaces = [
-    { title: "The Performance Floor", img: imgPerformanceFloor, desc: "Strength training, open turf, and our massive digital leaderboard wall. Where the real work gets done.", link: "/spaces/performance-floor" },
-    { title: "The Clubhouse", img: imgClubhouse, desc: "The social heart. Big screens, community tables, and lounge seating to hang out after.", link: "/spaces/clubhouse" },
-    { title: "The Fuel Station", img: imgFuelStation, desc: "Self-serve nutrition hub. Protein dispensers, pre-workout on tap, and grab-and-go fuel.", link: "/spaces/fuel-station" },
-    { title: "The Outdoor Patio", img: imgOutdoorPatio, desc: "Fire pits, full-court basketball, and string lights. Summer nights and post-workout recovery.", link: "/spaces/outdoor-patio" },
+    { title: "The Performance Floor", img: imgPerformanceFloor, desc: "Strength training, open turf, and a massive digital leaderboard wall. Competition and encouragement — side by side.", link: "/spaces/performance-floor" },
+    { title: "The Clubhouse", img: imgClubhouse, desc: "Big screens, community tables, and lounge seating. The social heart of the club — where you come even when you skip the workout.", link: "/spaces/clubhouse" },
+    { title: "The Fuel Station", img: imgFuelStation, desc: "Self-serve nutrition. $2 protein shakes, real food, coffee. High quality, low price, no friction.", link: "/spaces/fuel-station" },
+    { title: "The Outdoor Patio", img: imgOutdoorPatio, desc: "Fire pits, basketball, string lights, and big screens. The place you stay long after the workout is done.", link: "/spaces/outdoor-patio" },
   ];
 
   return (
-    <section id="spaces" className="py-24 md:py-40 bg-background relative z-10">
+    <section id="experience" className="py-24 md:py-40 bg-background relative z-10">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -271,7 +248,7 @@ const Spaces = () => {
             </h2>
           </div>
           <p className="text-xl md:text-3xl text-muted-foreground font-display tracking-widest uppercase max-w-sm">
-            Designed for athletic performance and social connection.
+            What does it feel like to spend an afternoon here?
           </p>
         </motion.div>
 
@@ -309,138 +286,237 @@ const Spaces = () => {
   );
 };
 
-// ─── PrimalTrack OS / Member Journey ─────────────────────────────────────────
-const PrimalTrack = () => {
+// ─── Chapter 3: The Motivation Engine ────────────────────────────────────────
+const MotivationEngine = () => (
+  <section id="app" className="py-24 md:py-40 bg-secondary relative overflow-hidden border-y border-white/5">
+    <div className="absolute inset-0 electric-grid opacity-20 pointer-events-none" />
+    <div className="container mx-auto px-6 relative z-10">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24"
+      >
+        <div className="flex-1 space-y-8">
+          <div className="inline-flex items-center gap-3 px-6 py-2 bg-primary/10 border border-primary text-primary font-display text-lg tracking-widest uppercase rounded-sm font-bold shadow-[0_0_15px_rgba(198,255,0,0.2)]">
+            <Target className="w-6 h-6" /> PrimalTrack
+          </div>
+          <h2 className="font-display text-5xl md:text-7xl lg:text-[7rem] font-black uppercase tracking-tighter leading-none">
+            Your Personal<br />
+            <span className="text-primary">Progress Engine.</span>
+          </h2>
+          <p className="text-xl text-muted-foreground font-light leading-relaxed max-w-xl">
+            PrimalTrack is not a workout app. It is the engine that powers everything inside Project Clubhouse. It keeps members engaged before, during, and long after every session — turning every visit into momentum.
+          </p>
+          <div className="space-y-4 pt-2">
+            {[
+              "Live Progress Leaderboards on the Performance Floor",
+              "Verified Personal Records — Celebrated by the Club",
+              "Digital Achievements & Community Status",
+              "Squads, Challenges & Club Events",
+              "Rewards That Grow With Your Journey",
+            ].map((f, i) => (
+              <div key={i} className="flex items-center gap-4 font-display uppercase tracking-wider font-bold text-lg">
+                <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0" />
+                {f}
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 pt-2">
+            <Button size="lg" className="text-xl px-10 h-16 font-black" asChild>
+              <a href="https://primaltrack.replit.app" target="_blank" rel="noopener noreferrer">
+                Launch PrimalTrack <ArrowRight className="ml-3 w-6 h-6" />
+              </a>
+            </Button>
+            <Button size="lg" variant="outline" className="text-xl px-10 h-16 font-black border-white/20 hover:border-primary hover:text-primary" asChild>
+              <a href="https://primaltrack.replit.app" target="_blank" rel="noopener noreferrer">
+                See How It Works
+              </a>
+            </Button>
+          </div>
+        </div>
+        <div className="flex-1 relative">
+          <div className="absolute inset-0 bg-primary/20 blur-[120px] rounded-full" />
+          <img
+            src={imgAppInfo}
+            alt="PrimalTrack Progress Engine"
+            className="relative z-10 w-full max-w-lg mx-auto rounded-xl border-4 border-white/5 shadow-2xl shadow-black/80 hover:-translate-y-4 hover:shadow-[0_20px_50px_rgba(198,255,0,0.3)] transition-all duration-500"
+          />
+        </div>
+      </motion.div>
+    </div>
+  </section>
+);
+
+// ─── Flywheel ─────────────────────────────────────────────────────────────────
+const Flywheel = () => {
   const steps = [
-    { label: "Join Club", sub: "One membership. Everything included." },
-    { label: "Walk In", sub: "Tap your phone. You're checked in." },
-    { label: "Auto Check-In", sub: "PrimalTrack logs your visit instantly." },
-    { label: "Workout Logged", sub: "Sets, reps, and PRs tracked live." },
-    { label: "Progress Updated", sub: "Your score evolves in real time." },
-    { label: "Leaderboard Changes", sub: "Your name moves up the board." },
-    { label: "Rewards Earned", sub: "Streaks, badges, and credits unlock." },
-    { label: "Community Events", sub: "Get invited to the next competition." },
-    { label: "Repeat", sub: "The loop that keeps you coming back." },
+    { label: "Workout", icon: <Dumbbell className="w-6 h-6" /> },
+    { label: "Progress", icon: <TrendingUp className="w-6 h-6" /> },
+    { label: "Leaderboards", icon: <Trophy className="w-6 h-6" /> },
+    { label: "Community", icon: <Users className="w-6 h-6" /> },
+    { label: "Rewards", icon: <Gift className="w-6 h-6" /> },
+    { label: "Events", icon: <CalendarDays className="w-6 h-6" /> },
+    { label: "Belonging", icon: <Heart className="w-6 h-6" /> },
+    { label: "Workout Again", icon: <RefreshCw className="w-6 h-6" /> },
   ];
 
   return (
-    <section id="app" className="py-24 md:py-40 bg-secondary relative overflow-hidden border-y border-white/5">
-      <div className="absolute inset-0 electric-grid opacity-20 pointer-events-none" />
-      <div className="container mx-auto px-6 relative z-10">
-
-        {/* Header */}
+    <section className="py-24 md:py-40 bg-background relative border-t border-white/5 overflow-hidden">
+      <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-20 md:mb-32"
         >
-          <div className="inline-flex items-center gap-3 px-6 py-2 bg-primary/10 border border-primary text-primary font-display text-lg tracking-widest uppercase rounded-sm font-bold shadow-[0_0_15px_rgba(198,255,0,0.2)] mb-8">
-            <Target className="w-6 h-6" /> The App
-          </div>
-          <h2 className="font-display text-5xl md:text-8xl lg:text-[9rem] font-black uppercase tracking-tighter leading-none mb-6">
-            PRIMAL<span className="text-primary">TRACK</span><br />
-            <span className="text-4xl md:text-6xl text-muted-foreground">The Operating System Behind Every Member Journey</span>
+          <h2 className="font-display text-5xl md:text-7xl lg:text-[8rem] font-black uppercase tracking-tighter leading-none mb-6">
+            The Ecosystem.<br /><span className="text-primary">The Loop.</span>
           </h2>
+          <p className="text-xl md:text-2xl text-muted-foreground font-display tracking-widest uppercase max-w-2xl mx-auto">
+            The physical club and the app are inseparable. This is what keeps members coming back — not habit. Momentum.
+          </p>
         </motion.div>
 
-        {/* Journey Flow */}
-        <div className="flex flex-col items-center mb-24 md:mb-40">
+        {/* Flywheel steps */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
           {steps.map((step, i) => (
-            <React.Fragment key={i}>
-              <motion.div
-                initial={{ opacity: 0, x: i % 2 === 0 ? -40 : 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ delay: i * 0.05 }}
-                className="flex items-center gap-6 w-full max-w-2xl"
-              >
-                <div className={`flex-1 p-6 md:p-8 border transition-all duration-300 hover:border-primary/60 group cursor-default ${i === steps.length - 1 ? "bg-primary/10 border-primary/40" : "bg-background border-white/5"}`}>
-                  <div className="flex items-center gap-4">
-                    <div className={`font-display text-sm tracking-widest uppercase font-bold ${i === steps.length - 1 ? "text-primary" : "text-muted-foreground"}`}>
-                      {String(i + 1).padStart(2, "0")}
-                    </div>
-                    <div>
-                      <h3 className={`font-display text-2xl md:text-3xl font-black uppercase tracking-tight leading-none group-hover:text-primary transition-colors ${i === steps.length - 1 ? "text-primary" : "text-white"}`}>
-                        {step.label}
-                      </h3>
-                      <p className="text-muted-foreground text-sm mt-1 font-light">{step.sub}</p>
-                    </div>
-                  </div>
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, scale: 0.85 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ delay: i * 0.08 }}
+              className="relative group"
+            >
+              <div className="p-6 md:p-8 bg-card border border-white/5 hover:border-primary/60 transition-all duration-300 hover:bg-primary/5 text-center">
+                <div className="font-display text-xs text-muted-foreground tracking-widest mb-4 uppercase">
+                  {String(i + 1).padStart(2, "0")}
                 </div>
-              </motion.div>
-              {i < steps.length - 1 && (
-                <div className="w-[1px] h-8 bg-gradient-to-b from-primary/60 to-primary/20 my-1 flex-shrink-0" />
+                <div className="text-primary mb-4 flex justify-center group-hover:scale-125 transition-transform duration-300">
+                  {step.icon}
+                </div>
+                <h3 className="font-display text-xl md:text-2xl font-black uppercase tracking-tight leading-none group-hover:text-primary transition-colors">
+                  {step.label}
+                </h3>
+              </div>
+              {/* Arrow connector (not on last item in row) */}
+              {i % 4 !== 3 && i !== steps.length - 1 && (
+                <div className="hidden md:block absolute top-1/2 -right-4 -translate-y-1/2 z-10 text-primary/40">
+                  <ArrowRight className="w-5 h-5" />
+                </div>
               )}
-            </React.Fragment>
+            </motion.div>
           ))}
         </div>
 
-        {/* App Image */}
+        {/* Loop callout */}
         <motion.div
-          initial={{ opacity: 0, y: 60 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24"
+          viewport={{ once: true }}
+          transition={{ delay: 0.6 }}
+          className="mt-12 flex items-center justify-center gap-4 text-muted-foreground font-display uppercase tracking-widest text-sm"
         >
-          <div className="flex-1 space-y-6">
-            <h3 className="font-display text-4xl md:text-6xl font-black uppercase tracking-tighter">
-              Not just a tracker.<br /><span className="text-primary">The club runs on it.</span>
-            </h3>
-            <p className="text-xl text-muted-foreground font-light leading-relaxed">
-              PrimalTrack syncs with the leaderboard on the Performance Floor wall, logs your check-ins automatically, tracks your PRs, and connects you to your squad — all without you thinking about it.
-            </p>
-            <div className="space-y-4 pt-4">
-              {[
-                "Live Gym Leaderboards on the Performance Floor",
-                "Verified Personal Records (PRs)",
-                "Digital Achievements & Club Status",
-                "Find Workout Partners & Join Squads",
-              ].map((f, i) => (
-                <div key={i} className="flex items-center gap-4 font-display uppercase tracking-wider font-bold text-lg">
-                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0" />
-                  {f}
-                </div>
-              ))}
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button size="lg" className="text-xl px-10 h-16 font-black" asChild>
-                <a href="https://primaltrack.replit.app" target="_blank" rel="noopener noreferrer">
-                  Launch PrimalTrack <ArrowRight className="ml-3 w-6 h-6" />
-                </a>
-              </Button>
-              <Button size="lg" variant="outline" className="text-xl px-10 h-16 font-black border-white/20 hover:border-primary hover:text-primary" asChild>
-                <a href="https://primaltrack.replit.app" target="_blank" rel="noopener noreferrer">
-                  See How It Works
-                </a>
-              </Button>
-            </div>
-          </div>
-          <div className="flex-1 relative">
-            <div className="absolute inset-0 bg-primary/20 blur-[120px] rounded-full" />
-            <img
-              src={imgAppInfo}
-              alt="PrimalTrack App Dashboard"
-              className="relative z-10 w-full max-w-lg mx-auto rounded-xl border-4 border-white/5 shadow-2xl shadow-black/80 hover:-translate-y-4 hover:shadow-[0_20px_50px_rgba(198,255,0,0.3)] transition-all duration-500"
-            />
-          </div>
+          <RotateCcw className="w-4 h-4 text-primary" />
+          <span>The loop repeats — and every cycle makes it stronger.</span>
+          <RotateCcw className="w-4 h-4 text-primary" />
         </motion.div>
       </div>
     </section>
   );
 };
 
-// ─── Progress Wins ────────────────────────────────────────────────────────────
-const ProgressWins = () => {
-  const wins = [
-    { stat: "+18%", label: "Bench Improvement", sub: "Maya R. — 6 weeks", color: "text-primary" },
-    { stat: "42", label: "Day Workout Streak", sub: "Jayden K. — ongoing", color: "text-white" },
-    { stat: "MVP", label: "Community", sub: "Alex M. — this month", color: "text-primary" },
-    { stat: "1st", label: "Pull-Up Ever", sub: "Lexi T. — milestone", color: "text-white" },
-    { stat: "#1", label: "Most Improved", sub: "DeShaun P. — this week", color: "text-primary" },
-    { stat: "#2", label: "Local Club Rank", sub: "Club — regional board", color: "text-white" },
-    { stat: "Top 10", label: "Minnesota", sub: "State leaderboard", color: "text-primary" },
-    { stat: "National", label: "Leaderboard", sub: "Club on the map", color: "text-white" },
+// ─── Member Journey ───────────────────────────────────────────────────────────
+const MemberJourney = () => {
+  const journey = [
+    { step: "01", label: "Discover Project Clubhouse", time: "Day 1" },
+    { step: "02", label: "Download PrimalTrack", time: "Day 1" },
+    { step: "03", label: "Join Your Local Club", time: "Day 1" },
+    { step: "04", label: "Complete First Workout", time: "Day 1" },
+    { step: "05", label: "Earn Your First Badge", time: "Day 3" },
+    { step: "06", label: "Meet Your First Friend", time: "Week 1" },
+    { step: "07", label: "Attend Your First Event", time: "Week 2" },
+    { step: "08", label: "Earn a Protein Credit", time: "Week 3" },
+    { step: "09", label: "Hit a 30-Day Streak", time: "Month 1" },
+    { step: "10", label: "Climb the Leaderboard", time: "Month 2" },
+    { step: "11", label: "Mentor New Members", time: "Month 3+" },
+  ];
+
+  return (
+    <section className="py-24 md:py-40 bg-secondary relative overflow-hidden border-t border-white/5">
+      <div className="absolute inset-0 electric-grid opacity-10 pointer-events-none" />
+      <div className="container mx-auto px-6 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          className="mb-20 md:mb-32"
+        >
+          <h2 className="font-display text-5xl md:text-7xl lg:text-[8rem] font-black uppercase tracking-tighter leading-none mb-6">
+            Your Journey<br /><span className="text-primary">Starts Here.</span>
+          </h2>
+          <p className="text-xl md:text-2xl text-muted-foreground font-display tracking-widest uppercase max-w-2xl">
+            Every member begins the same way. What separates them is consistency — and community.
+          </p>
+        </motion.div>
+
+        <div className="flex flex-col items-center">
+          {journey.map((item, i) => (
+            <React.Fragment key={i}>
+              <motion.div
+                initial={{ opacity: 0, x: i % 2 === 0 ? -40 : 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ delay: i * 0.04 }}
+                className="flex items-center gap-6 w-full max-w-2xl"
+              >
+                <div className={`flex-1 p-6 md:p-8 border transition-all duration-300 hover:border-primary/60 group cursor-default ${
+                  i === journey.length - 1
+                    ? "bg-primary/10 border-primary/40"
+                    : i < 4
+                    ? "bg-background border-white/5"
+                    : "bg-background/60 border-white/5"
+                }`}>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-4">
+                      <div className={`font-display text-xs tracking-widest uppercase font-bold ${
+                        i === journey.length - 1 ? "text-primary" : "text-muted-foreground"
+                      }`}>
+                        {item.step}
+                      </div>
+                      <h3 className={`font-display text-xl md:text-2xl font-black uppercase tracking-tight leading-none group-hover:text-primary transition-colors ${
+                        i === journey.length - 1 ? "text-primary" : "text-white"
+                      }`}>
+                        {item.label}
+                      </h3>
+                    </div>
+                    <span className="font-display text-xs text-muted-foreground tracking-widest uppercase border border-white/10 px-3 py-1 flex-shrink-0">
+                      {item.time}
+                    </span>
+                  </div>
+                </div>
+              </motion.div>
+              {i < journey.length - 1 && (
+                <div className="w-[1px] h-6 bg-gradient-to-b from-primary/60 to-primary/20 my-0.5 flex-shrink-0" />
+              )}
+            </React.Fragment>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// ─── Leaderboard Cards ────────────────────────────────────────────────────────
+const LeaderboardCards = () => {
+  const cards = [
+    { icon: "🏆", category: "Most Improved", name: "Grant C.", stat: "+16%", sub: "This Month", accent: true },
+    { icon: "🔥", category: "Longest Streak", name: "46 Days", stat: "Ongoing", sub: "Maya R.", accent: false },
+    { icon: "❤️", category: "Community MVP", name: "Helped 17 Members", stat: "This Week", sub: "Alex M.", accent: false },
+    { icon: "💪", category: "First Pull-Up", name: "Sophia R.", stat: "Yesterday", sub: "Milestone Unlocked", accent: true },
+    { icon: "🥇", category: "Local Club", name: "Bench Press", stat: "#3", sub: "Project Clubhouse", accent: false },
+    { icon: "🏅", category: "State Rank", name: "15–16 Age Group", stat: "#12", sub: "Minnesota", accent: true },
   ];
 
   return (
@@ -452,27 +528,43 @@ const ProgressWins = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="mb-20 md:mb-32"
         >
-          <h2 className="font-display text-5xl md:text-8xl lg:text-[9rem] font-black uppercase tracking-tighter leading-none mb-6">
+          <h2 className="font-display text-5xl md:text-7xl lg:text-[8rem] font-black uppercase tracking-tighter leading-none mb-6">
             Progress<br /><span className="text-primary">Wins.</span>
           </h2>
-          <p className="text-xl md:text-3xl text-muted-foreground font-display tracking-widest uppercase max-w-3xl">
-            Most fitness companies reward the strongest. We reward improvement. Every member has a shot at the top.
+          <p className="text-xl md:text-2xl text-muted-foreground font-display tracking-widest uppercase max-w-3xl">
+            Most fitness companies reward the strongest. We reward the most dedicated. Every member has a shot.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-          {wins.map((win, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+          {cards.map((card, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
-              transition={{ delay: i * 0.07 }}
-              className="group p-8 md:p-10 bg-card border border-white/5 hover:border-primary/40 transition-all duration-300 hover:bg-primary/5"
+              transition={{ delay: i * 0.08 }}
+              className={`group p-8 md:p-10 border transition-all duration-300 hover:scale-[1.02] cursor-default ${
+                card.accent
+                  ? "bg-primary/5 border-primary/30 hover:border-primary/60 hover:bg-primary/10"
+                  : "bg-card border-white/5 hover:border-primary/30 hover:bg-primary/5"
+              }`}
             >
-              <div className={`font-display text-5xl md:text-6xl font-black leading-none mb-3 group-hover:scale-105 transition-transform ${win.color}`}>{win.stat}</div>
-              <div className="font-display text-xl md:text-2xl font-black uppercase tracking-tight leading-tight mb-2 text-white">{win.label}</div>
-              <div className="text-muted-foreground text-sm font-light">{win.sub}</div>
+              <div className="text-4xl mb-6">{card.icon}</div>
+              <div className="font-display text-xs text-muted-foreground tracking-[0.3em] uppercase mb-3">
+                {card.category}
+              </div>
+              <div className={`font-display text-4xl md:text-5xl font-black uppercase tracking-tight leading-none mb-2 group-hover:text-primary transition-colors ${card.accent ? "text-primary" : "text-white"}`}>
+                {card.name}
+              </div>
+              <div className="flex items-baseline gap-3 mt-4">
+                <span className="font-display text-2xl md:text-3xl font-black text-white">
+                  {card.stat}
+                </span>
+                <span className="text-muted-foreground text-sm font-light">
+                  {card.sub}
+                </span>
+              </div>
             </motion.div>
           ))}
         </div>
@@ -481,7 +573,7 @@ const ProgressWins = () => {
   );
 };
 
-// ─── Leaderboard Visualization ────────────────────────────────────────────────
+// ─── Leaderboard Visualization ─────────────────────────────────────────────────
 const leaderboardData: Record<string, { rank: number; name: string; score: number; change: string }[]> = {
   Friends: [
     { rank: 1, name: "Maya R.", score: 2840, change: "+3" },
@@ -515,17 +607,16 @@ const leaderboardData: Record<string, { rank: number; name: string; score: numbe
     { rank: 1, name: "Apex Chicago", score: 198400, change: "—" },
     { rank: 2, name: "The Grid NYC", score: 184200, change: "+1" },
     { rank: 3, name: "Peak LA Fitness", score: 172600, change: "-1" },
-    { rank: 47, name: "Proj. Clubhouse ↑", score: 38400, change: "+8", },
+    { rank: 47, name: "Proj. Clubhouse ↑", score: 38400, change: "+8" },
     { rank: 48, name: "Austin Club", score: 37100, change: "—" },
   ],
 };
 
 const LeaderboardViz = () => {
   const levels = ["Friends", "Local Club", "City", "State", "National"];
-  const filters = ["All Ages", "Under 18", "18-24", "25-34", "35+"];
+  const filters = ["All Ages", "Under 18", "18–24", "25–34", "35+"];
   const [activeLevel, setActiveLevel] = useState("Friends");
   const [activeFilter, setActiveFilter] = useState("All Ages");
-
   const rows = leaderboardData[activeLevel] || [];
 
   return (
@@ -538,16 +629,15 @@ const LeaderboardViz = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="mb-16 md:mb-24"
         >
-          <h2 className="font-display text-5xl md:text-8xl lg:text-[9rem] font-black uppercase tracking-tighter leading-none mb-6">
+          <h2 className="font-display text-5xl md:text-7xl lg:text-[8rem] font-black uppercase tracking-tighter leading-none mb-6">
             Everyone Has<br /><span className="text-primary">A Rank.</span>
           </h2>
-          <p className="text-xl md:text-3xl text-muted-foreground font-display tracking-widest uppercase max-w-3xl">
+          <p className="text-xl md:text-2xl text-muted-foreground font-display tracking-widest uppercase max-w-3xl">
             From your friend group to the national stage. Filter by what matters to you.
           </p>
         </motion.div>
 
-        {/* Level Tabs */}
-        <div className="flex gap-2 md:gap-3 flex-wrap mb-6">
+        <div className="flex gap-2 md:gap-3 flex-wrap mb-4">
           {levels.map((lvl) => (
             <button
               key={lvl}
@@ -563,7 +653,6 @@ const LeaderboardViz = () => {
           ))}
         </div>
 
-        {/* Filter Pills */}
         <div className="flex gap-2 flex-wrap mb-10">
           {filters.map((f) => (
             <button
@@ -580,7 +669,6 @@ const LeaderboardViz = () => {
           ))}
         </div>
 
-        {/* Table */}
         <motion.div
           key={activeLevel}
           initial={{ opacity: 0, y: 20 }}
@@ -590,8 +678,8 @@ const LeaderboardViz = () => {
         >
           <div className="grid grid-cols-12 px-6 md:px-10 py-4 border-b border-white/5 text-muted-foreground font-display text-xs uppercase tracking-widest">
             <span className="col-span-1">Rank</span>
-            <span className="col-span-6 md:col-span-7">Name</span>
-            <span className="col-span-3 text-right">Score</span>
+            <span className="col-span-6 md:col-span-7">Member</span>
+            <span className="col-span-3 text-right">Progress Score</span>
             <span className="col-span-2 text-right">Change</span>
           </div>
           {rows.map((row, i) => (
@@ -617,9 +705,8 @@ const LeaderboardViz = () => {
             </motion.div>
           ))}
         </motion.div>
-
         <p className="mt-6 text-muted-foreground font-display text-sm uppercase tracking-widest text-center">
-          Rankings update live · Powered by PrimalTrack OS
+          Rankings update live · Powered by PrimalTrack
         </p>
       </div>
     </section>
@@ -637,19 +724,19 @@ const ProgressScore = () => (
         className="text-center max-w-5xl mx-auto mb-20 md:mb-32"
       >
         <h2 className="font-display text-5xl md:text-7xl lg:text-[7rem] leading-none font-black uppercase tracking-tighter mb-8">
-          WE REWARD <span className="text-primary block md:inline">IMPROVEMENT.</span><br />
-          NOT JUST RAW STRENGTH.
+          We Reward <span className="text-primary block md:inline">Improvement.</span><br />
+          Not Just Raw Strength.
         </h2>
-        <p className="text-xl md:text-3xl text-muted-foreground font-light max-w-3xl mx-auto leading-relaxed">
-          Our Progress Score ensures everyone has a shot at the top. The leaderboard isn't just for the elite—it's for the most dedicated.
+        <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-3xl mx-auto leading-relaxed">
+          Our Progress Score ensures everyone has a shot at the top. The leaderboard is not for the elite — it is for the most consistent, the most dedicated, and the most improved.
         </p>
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
         {[
-          { title: "Most Improved", icon: <Flame className="w-12 h-12 text-background" />, desc: "Based on relative gains. Pushing your limits week over week? You'll climb.", num: "01" },
-          { title: "Consistency", icon: <Activity className="w-12 h-12 text-background" />, desc: "Show up. Put in the reps. Our consistency score tracks your discipline over time.", num: "02" },
-          { title: "Community", icon: <Users className="w-12 h-12 text-background" />, desc: "Spot a friend. Join a squad. Real impact goes way beyond the weights you lift.", num: "03" },
+          { title: "Most Improved", icon: <Flame className="w-12 h-12 text-background" />, desc: "Based on relative gains. Pushing your limits week over week? You will climb.", num: "01" },
+          { title: "Consistency", icon: <Activity className="w-12 h-12 text-background" />, desc: "Show up. Put in the reps. Our consistency score tracks your momentum over time.", num: "02" },
+          { title: "Community", icon: <Users className="w-12 h-12 text-background" />, desc: "Spot a friend. Join a squad. Real growth goes way beyond the weights you lift.", num: "03" },
         ].map((item, i) => (
           <motion.div
             key={i}
@@ -676,31 +763,32 @@ const ProgressScore = () => (
   </section>
 );
 
-// ─── Rewards ─────────────────────────────────────────────────────────────────
+// ─── Chapter 4: Membership ────────────────────────────────────────────────────
 const Rewards = () => {
   const rewards = [
     { icon: <Coffee className="w-8 h-8" />, label: "Protein Credits", desc: "Earn shake tokens just for showing up consistently." },
-    { icon: <Gift className="w-8 h-8" />, label: "Membership Discounts", desc: "Long-term members pay less. Loyalty has real value here." },
+    { icon: <Gift className="w-8 h-8" />, label: "Membership Discounts", desc: "Long-term community members pay less. Loyalty has real value here." },
     { icon: <Ticket className="w-8 h-8" />, label: "Exclusive Events", desc: "Invite-only competitions and community nights." },
     { icon: <Medal className="w-8 h-8" />, label: "Badges & Status", desc: "Earn titles like Club MVP, Iron Streak, and Community Leader." },
     { icon: <Star className="w-8 h-8" />, label: "Community Recognition", desc: "Your name on the board. Your story in the feed." },
-    { icon: <ShoppingBag className="w-8 h-8" />, label: "Merchandise", desc: "Earn limited gear. Wear what you've actually worked for." },
+    { icon: <ShoppingBag className="w-8 h-8" />, label: "Merchandise", desc: "Earn limited gear. Wear what you have actually worked for." },
   ];
 
   return (
-    <section className="py-24 md:py-40 bg-background relative border-t border-white/5">
-      <div className="container mx-auto px-6">
+    <section className="py-24 md:py-40 bg-secondary relative border-t border-white/5">
+      <div className="absolute inset-0 electric-grid opacity-10 pointer-events-none" />
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           className="mb-20 md:mb-32"
         >
-          <h2 className="font-display text-5xl md:text-8xl lg:text-[9rem] font-black uppercase tracking-tighter leading-none mb-6">
+          <h2 className="font-display text-5xl md:text-7xl lg:text-[8rem] font-black uppercase tracking-tighter leading-none mb-6">
             Progress<br /><span className="text-primary">Creates Rewards.</span>
           </h2>
-          <p className="text-xl md:text-3xl text-muted-foreground font-display tracking-widest uppercase max-w-3xl">
-            Consistency earns tangible benefits. Show up. Level up. Cash in.
+          <p className="text-xl md:text-2xl text-muted-foreground font-display tracking-widest uppercase max-w-3xl">
+            Consistency earns tangible benefits. Show up. Build momentum. Cash in.
           </p>
         </motion.div>
 
@@ -712,7 +800,7 @@ const Rewards = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ delay: i * 0.08 }}
-              className="group flex items-start gap-6 p-8 md:p-10 bg-card border border-white/5 hover:border-primary/50 transition-all duration-300"
+              className="group flex items-start gap-6 p-8 md:p-10 bg-background border border-white/5 hover:border-primary/50 transition-all duration-300"
             >
               <div className="text-primary flex-shrink-0 group-hover:scale-110 transition-transform duration-300 mt-1">
                 {r.icon}
@@ -729,9 +817,8 @@ const Rewards = () => {
   );
 };
 
-// ─── Pricing ─────────────────────────────────────────────────────────────────
 const Pricing = () => (
-  <section id="pricing" className="py-24 md:py-40 bg-background relative overflow-hidden clip-slanted-reverse border-b border-primary/20">
+  <section id="membership" className="py-24 md:py-40 bg-background relative overflow-hidden border-b border-primary/20">
     <div className="absolute inset-0 electric-grid opacity-10 pointer-events-none" />
     <div className="absolute left-0 top-1/2 -translate-y-1/2 text-[15rem] md:text-[25rem] font-display font-black text-stroke-white opacity-5 whitespace-nowrap pointer-events-none select-none">
       MEMBERSHIP
@@ -751,10 +838,10 @@ const Pricing = () => (
         <ul className="text-left max-w-lg mx-auto space-y-6 mb-16 mt-16">
           {[
             "Unlimited Access to the Performance Floor",
-            "Full use of The Clubhouse & Fuel Station",
+            "Full Use of The Clubhouse & Fuel Station",
             "Outdoor Patio & Court Access",
-            "PrimalTrack OS Premium Account",
-            "Zero hidden fees. Cancel anytime.",
+            "PrimalTrack Premium Account",
+            "Zero Hidden Fees. Cancel Anytime.",
           ].map((feature, i) => (
             <li key={i} className="flex items-start gap-5 text-xl md:text-2xl font-medium font-display tracking-wider uppercase">
               <CheckCircle2 className="text-primary w-8 h-8 flex-shrink-0 mt-1" />
@@ -770,7 +857,6 @@ const Pricing = () => (
   </section>
 );
 
-// ─── Who Is This For ──────────────────────────────────────────────────────────
 const WhoIsThisFor = () => (
   <section className="py-24 md:py-40 bg-background relative border-b border-white/5">
     <div className="container mx-auto px-6">
@@ -784,7 +870,7 @@ const WhoIsThisFor = () => (
           Who Is <span className="text-primary">This For?</span>
         </h2>
         <p className="text-2xl md:text-4xl text-muted-foreground font-display tracking-widest uppercase">
-          Built for the next generation of athletes.
+          Anyone who wants to improve — and find their people doing it.
         </p>
       </motion.div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -794,10 +880,10 @@ const WhoIsThisFor = () => (
         </div>
         <div className="space-y-12">
           {[
-            { title: "Teenagers (13-18)", desc: "A safe, high-energy environment to build strength, confidence, and discipline from day one." },
-            { title: "College Students", desc: "Your campus gym is crowded and smells weird. This is your escape. Better equipment, better vibe." },
-            { title: "Young Adults", desc: "Find your squad. Push your limits. Actually look forward to where you work out." },
-            { title: "Athletes & Families", desc: "Train together. Support each other. A community built entirely on mutual improvement." },
+            { title: "Teenagers (13–18)", desc: "A safe, high-energy environment to build strength, confidence, and consistency from day one." },
+            { title: "College Students", desc: "Your campus gym is crowded and smells weird. This is your escape — better equipment, better community." },
+            { title: "Young Adults", desc: "Find your squad. Push your limits. Actually look forward to where you train." },
+            { title: "Athletes & Families", desc: "Train together. Support each other. A community built entirely around mutual growth." },
           ].map((group, i) => (
             <motion.div key={i} initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="border-l-4 border-white/10 hover:border-primary pl-8 md:pl-10 py-2 transition-colors duration-300">
               <h3 className="font-display text-4xl md:text-5xl font-black uppercase tracking-tight mb-3 leading-none text-white">{group.title}</h3>
@@ -829,13 +915,13 @@ const FounderWall = () => (
         </h2>
 
         <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto mb-16">
-          This is Version 1 of Project Clubhouse. Over the coming months, we'll continue refining the club, the app, and the experience with input from future members, parents, athletes, and coaches.
+          This is Version 1 of Project Clubhouse. Over the coming months, we will continue refining the club, the app, and the experience — with input from future community members, parents, athletes, and coaches.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 text-left">
           {[
             { label: "The Club", desc: "Physical location. Equipment. Zones. Community spaces. Coming to your area." },
-            { label: "PrimalTrack", desc: "The app that powers everything. Leaderboards, check-ins, rewards, and squads." },
+            { label: "PrimalTrack", desc: "The Progress Engine that powers everything — leaderboards, check-ins, rewards, and squads." },
             { label: "The Experience", desc: "Events, competitions, member milestones. The thing that keeps you coming back." },
           ].map((item, i) => (
             <motion.div
@@ -876,7 +962,7 @@ const Footer = () => (
         Come for the workout.<br />
         <span className="text-primary text-glow">Stay for the community.</span>
       </p>
-      <Button size="lg" className="text-2xl md:text-4xl px-16 h-20 md:h-24 font-black" onClick={() => document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" })}>
+      <Button size="lg" className="text-2xl md:text-4xl px-16 h-20 md:h-24 font-black" onClick={() => document.getElementById("membership")?.scrollIntoView({ behavior: "smooth" })}>
         JOIN THE CLUB
       </Button>
       <div className="w-full mt-32 pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-8 text-muted-foreground font-display text-xl uppercase tracking-widest font-bold">
@@ -907,15 +993,28 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Marquee text="COME FOR THE WORKOUT • STAY FOR THE COMMUNITY" />
-      <MoreThanAGym />
-      <WhyMembersStay />
+
+      {/* Chapter 1 — Why */}
+      <ChapterDivider num="01" title="Why We Exist" />
+      <WhyWeExist />
+
+      {/* Chapter 2 — The Experience */}
+      <ChapterDivider num="02" title="The Experience" />
       <Spaces />
-      <PrimalTrack />
-      <ProgressWins />
+
+      {/* Chapter 3 — The Motivation Engine */}
+      <ChapterDivider num="03" title="The Motivation Engine" />
+      <MotivationEngine />
+      <Flywheel />
+      <MemberJourney />
+      <LeaderboardCards />
       <LeaderboardViz />
       <ProgressScore />
-      <Rewards />
+
+      {/* Chapter 4 — Membership */}
       <Marquee text="STRONGER TOGETHER • BETTER EVERY DAY" reverse />
+      <ChapterDivider num="04" title="Membership" />
+      <Rewards />
       <Pricing />
       <WhoIsThisFor />
       <FounderWall />

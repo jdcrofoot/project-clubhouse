@@ -7,6 +7,7 @@ import PerformanceFloor from '@/pages/spaces/PerformanceFloor';
 import Clubhouse from '@/pages/spaces/Clubhouse';
 import FuelStation from '@/pages/spaces/FuelStation';
 import OutdoorPatio from '@/pages/spaces/OutdoorPatio';
+import Roadmap from '@/pages/Roadmap';
 import { Route, Switch, Router as WouterRouter } from 'wouter';
 
 const queryClient = new QueryClient();
@@ -19,6 +20,7 @@ function Router() {
       <Route path="/spaces/clubhouse" component={Clubhouse} />
       <Route path="/spaces/fuel-station" component={FuelStation} />
       <Route path="/spaces/outdoor-patio" component={OutdoorPatio} />
+      <Route path="/roadmap" component={Roadmap} />
       <Route component={NotFound} />
     </Switch>
   );
