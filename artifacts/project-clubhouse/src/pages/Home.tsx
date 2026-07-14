@@ -29,14 +29,14 @@ import {
 import { Navbar } from "@/components/Navbar";
 import { Link } from "wouter";
 
-import imgHero from "@assets/generated_images/hero_gym_sportsbook.png";
-import imgPerformanceFloor from "@assets/generated_images/performance_floor_v1_1.png";
-import imgClubhouse from "@assets/generated_images/clubhouse_v1_1.png";
-import imgFuelStation from "@assets/generated_images/fuel_station_v1_1.png";
-import imgOutdoorPatio from "@assets/generated_images/outdoor_patio_v1_1.png";
-import imgAppInfo from "@assets/generated_images/app_experience_v1_1.png";
-import imgSupport1 from "@assets/generated_images/arrival_experience_v1_1.png";
-import imgSupport2 from "@assets/generated_images/app_experience_v1_1.png";
+import imgHero from "@assets/ChatGPT_Image_Jul_14,_2026,_12_50_52_PM_1784052604353.png";
+import imgPerformanceFloor from "@assets/ChatGPT_Image_Jul_14,_2026,_12_51_10_PM_1784052604352.png";
+import imgClubhouse from "@assets/ChatGPT_Image_Jul_14,_2026,_12_51_02_PM_1784052604353.png";
+import imgFuelStation from "@assets/ChatGPT_Image_Jul_14,_2026,_12_51_25_PM_1784052604352.png";
+import imgOutdoorPatio from "@assets/ChatGPT_Image_Jul_14,_2026,_12_51_18_PM_1784052604352.png";
+import imgAppInfo from "@assets/ChatGPT_Image_Jul_14,_2026,_12_50_45_PM_1784052604353.png";
+import imgSupport1 from "@assets/ChatGPT_Image_Jul_14,_2026,_12_50_52_PM_1784052604353.png";
+import imgSupport2 from "@assets/ChatGPT_Image_Jul_14,_2026,_12_50_45_PM_1784052604353.png";
 import imgSupport3 from "@assets/ChatGPT_Image_Jul_14,_2026,_12_50_33_PM_1784052604354.png";
 
 // ─── Hero ────────────────────────────────────────────────────────────────────

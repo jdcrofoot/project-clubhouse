@@ -4,7 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, MonitorPlay, Zap, CheckCircle2 } from "lucide-react";
 import { Link } from "wouter";
-import imgClubhouse from "@assets/generated_images/clubhouse_v1_1.png";
+import imgClubhouse from "@assets/ChatGPT_Image_Jul_14,_2026,_12_51_02_PM_1784052604353.png";
 
 export default function Clubhouse() {
   useEffect(() => {
