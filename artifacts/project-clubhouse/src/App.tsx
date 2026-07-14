@@ -3,6 +3,10 @@ import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import NotFound from '@/pages/not-found';
 import Home from '@/pages/Home';
+import PerformanceFloor from '@/pages/spaces/PerformanceFloor';
+import Clubhouse from '@/pages/spaces/Clubhouse';
+import FuelStation from '@/pages/spaces/FuelStation';
+import OutdoorPatio from '@/pages/spaces/OutdoorPatio';
 import { Route, Switch, Router as WouterRouter } from 'wouter';
 
 const queryClient = new QueryClient();
@@ -11,6 +15,10 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/spaces/performance-floor" component={PerformanceFloor} />
+      <Route path="/spaces/clubhouse" component={Clubhouse} />
+      <Route path="/spaces/fuel-station" component={FuelStation} />
+      <Route path="/spaces/outdoor-patio" component={OutdoorPatio} />
       <Route component={NotFound} />
     </Switch>
   );

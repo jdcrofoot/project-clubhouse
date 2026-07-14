@@ -14,6 +14,9 @@ import {
   X 
 } from "lucide-react";
 
+import { Navbar } from "@/components/Navbar";
+import { Link } from "wouter";
+
 // --- ASSETS ---
 import imgPerformanceFloor from "@assets/ChatGPT_Image_Jul_14,_2026,_12_51_10_PM_1784052604352.png";
 import imgClubhouse from "@assets/ChatGPT_Image_Jul_14,_2026,_12_51_02_PM_1784052604353.png";
@@ -25,67 +28,6 @@ import imgSupport2 from "@assets/ChatGPT_Image_Jul_14,_2026,_12_50_45_PM_1784052
 import imgSupport3 from "@assets/ChatGPT_Image_Jul_14,_2026,_12_50_33_PM_1784052604354.png";
 
 // --- COMPONENTS ---
-
-const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const scrollTo = (id: string) => {
-    setMobileMenuOpen(false);
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/90 backdrop-blur-md border-b border-white/5 py-4 shadow-lg shadow-black/50" : "bg-transparent py-6"
-      }`}
-    >
-      <div className="container mx-auto px-6 flex justify-between items-center">
-        <div 
-          className="flex items-center gap-3 cursor-pointer group" 
-          onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
-        >
-          <div className="bg-primary text-background p-2 rounded-sm group-hover:scale-110 transition-transform">
-            <Dumbbell className="w-6 h-6" />
-          </div>
-          <span className="font-display font-black text-2xl tracking-widest uppercase">Project Clubhouse</span>
-        </div>
-        
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8 font-display tracking-widest text-lg font-bold uppercase">
-          <button onClick={() => scrollTo("spaces")} className="text-muted-foreground hover:text-primary transition-colors">The Spaces</button>
-          <button onClick={() => scrollTo("app")} className="text-muted-foreground hover:text-primary transition-colors">PrimalTrack</button>
-          <button onClick={() => scrollTo("pricing")} className="text-muted-foreground hover:text-primary transition-colors">Membership</button>
-          <Button onClick={() => scrollTo("pricing")}>Join Now</Button>
-        </div>
-
-        {/* Mobile Nav Toggle */}
-        <button className="md:hidden text-foreground" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-          {mobileMenuOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-background border-b border-white/10 p-6 flex flex-col gap-6 font-display text-2xl uppercase font-bold text-center shadow-2xl">
-          <button onClick={() => scrollTo("spaces")} className="text-muted-foreground hover:text-primary transition-colors">The Spaces</button>
-          <button onClick={() => scrollTo("app")} className="text-muted-foreground hover:text-primary transition-colors">PrimalTrack</button>
-          <button onClick={() => scrollTo("pricing")} className="text-muted-foreground hover:text-primary transition-colors">Membership</button>
-          <Button className="w-full text-xl py-6" onClick={() => scrollTo("pricing")}>Join Now</Button>
-        </div>
-      )}
-    </motion.nav>
-  );
-};
 
 const Hero = () => {
   const { scrollY } = useScroll();
@@ -168,10 +110,10 @@ const Marquee = ({ text, reverse = false }: { text: string; reverse?: boolean })
 
 const Spaces = () => {
   const spaces = [
-    { title: "The Performance Floor", img: imgPerformanceFloor, desc: "Strength training, open turf, and our massive digital leaderboard wall. Where the real work gets done." },
-    { title: "The Clubhouse", img: imgClubhouse, desc: "The social heart. Big screens, community tables, and lounge seating to hang out after." },
-    { title: "The Fuel Station", img: imgFuelStation, desc: "Self-serve nutrition hub. Protein dispensers, pre-workout on tap, and grab-and-go fuel." },
-    { title: "The Outdoor Patio", img: imgOutdoorPatio, desc: "Fire pits, full-court basketball, and string lights. Summer nights and post-workout recovery." },
+    { title: "The Performance Floor", img: imgPerformanceFloor, desc: "Strength training, open turf, and our massive digital leaderboard wall. Where the real work gets done.", link: "/spaces/performance-floor" },
+    { title: "The Clubhouse", img: imgClubhouse, desc: "The social heart. Big screens, community tables, and lounge seating to hang out after.", link: "/spaces/clubhouse" },
+    { title: "The Fuel Station", img: imgFuelStation, desc: "Self-serve nutrition hub. Protein dispensers, pre-workout on tap, and grab-and-go fuel.", link: "/spaces/fuel-station" },
+    { title: "The Outdoor Patio", img: imgOutdoorPatio, desc: "Fire pits, full-court basketball, and string lights. Summer nights and post-workout recovery.", link: "/spaces/outdoor-patio" },
   ];
 
   return (
@@ -202,23 +144,28 @@ const Spaces = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: i * 0.1 }}
-              className="group relative h-[400px] md:h-[600px] overflow-hidden bg-card border border-white/5"
             >
-              <img src={space.img} alt={space.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70 group-hover:opacity-40 grayscale-[50%]" />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
-              
-              {/* Electric border accent */}
-              <div className="absolute top-0 left-0 w-full h-1 bg-primary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out" />
-              
-              <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-end">
-                <div className="w-12 h-12 md:w-16 md:h-16 rounded-sm bg-primary flex items-center justify-center text-primary-foreground font-display text-3xl font-black mb-6 transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
-                  0{i+1}
+              <Link href={space.link} className="block group relative h-[400px] md:h-[600px] overflow-hidden bg-card border border-white/5">
+                <img src={space.img} alt={space.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70 group-hover:opacity-40 grayscale-[50%]" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+                
+                {/* Electric border accent */}
+                <div className="absolute top-0 left-0 w-full h-1 bg-primary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out" />
+                
+                <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-end">
+                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-sm bg-primary flex items-center justify-center text-primary-foreground font-display text-3xl font-black mb-6 transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+                    0{i+1}
+                  </div>
+                  <h3 className="font-display text-4xl md:text-6xl font-black uppercase tracking-tight mb-4 leading-none">{space.title}</h3>
+                  <p className="text-lg md:text-xl text-gray-400 transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100 ease-out max-w-md">
+                    {space.desc}
+                  </p>
+
+                  <div className="mt-6 flex items-center text-primary font-display uppercase tracking-widest font-bold text-lg opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-200">
+                    Explore <ArrowRight className="ml-2 w-5 h-5" />
+                  </div>
                 </div>
-                <h3 className="font-display text-4xl md:text-6xl font-black uppercase tracking-tight mb-4 leading-none">{space.title}</h3>
-                <p className="text-lg md:text-xl text-gray-400 transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100 ease-out max-w-md">
-                  {space.desc}
-                </p>
-              </div>
+              </Link>
             </motion.div>
           ))}
         </div>
@@ -512,6 +459,15 @@ const Footer = () => {
 };
 
 export default function Home() {
+  useEffect(() => {
+    if (window.location.hash) {
+      setTimeout(() => {
+        const id = window.location.hash.replace("#", "");
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  }, []);
+
   return (
     <div className="bg-background min-h-screen text-foreground overflow-x-hidden selection:bg-primary selection:text-background">
       <Navbar />
