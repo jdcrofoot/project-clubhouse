@@ -403,6 +403,18 @@ const PrimalTrack = () => {
                 </div>
               ))}
             </div>
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <Button size="lg" className="text-xl px-10 h-16 font-black" asChild>
+                <a href="https://primaltrack.replit.app" target="_blank" rel="noopener noreferrer">
+                  Launch PrimalTrack <ArrowRight className="ml-3 w-6 h-6" />
+                </a>
+              </Button>
+              <Button size="lg" variant="outline" className="text-xl px-10 h-16 font-black border-white/20 hover:border-primary hover:text-primary" asChild>
+                <a href="https://primaltrack.replit.app" target="_blank" rel="noopener noreferrer">
+                  See How It Works
+                </a>
+              </Button>
+            </div>
           </div>
           <div className="flex-1 relative">
             <div className="absolute inset-0 bg-primary/20 blur-[120px] rounded-full" />
