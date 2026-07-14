@@ -1,0 +1,299 @@
+We're building something much bigger than a gym.
+
+This project is currently called Project Clubhouse (working title). It is a fitness-focused community company built around the idea that the future of fitness is not just exercise—it's belonging.
+
+I'm attaching a series of Vision Boards that represent our current thinking. These are not final designs. They are intended to communicate the vision and provide a foundation that we will continue iterating on.
+
+This project is being built alongside my 13-year-old son, Grant. One of my goals is to create something that genuinely appeals to teenagers, young adults, and parents—not by guessing what they want, but by designing it together.
+
+The Mission
+
+Create the place people don't want to leave.
+
+Traditional gyms are places where people work out and leave.
+
+We want to create a modern fitness clubhouse where people:
+
+Train
+Improve
+Build friendships
+Study
+Watch games
+Attend events
+Celebrate progress
+Feel like they belong
+
+The workout is only the beginning.
+
+Community is the product.
+
+The Target Customer
+
+Primary:
+
+Teenagers (13–18)
+High school athletes
+College students
+Young adults
+
+Secondary:
+
+Parents
+Adults who enjoy fitness and community
+Families
+
+Our goal is to create a place where a parent is excited to pay approximately $40/month because they know their child is spending time in a healthy, motivating environment.
+
+Core Design Principles
+
+The club should feel:
+
+Modern
+Athletic
+Social
+Energetic
+Affordable
+Purposeful
+
+It should NOT feel like:
+
+A luxury health club
+A country club
+A traditional gym
+A coffee shop
+
+The closest inspiration is probably somewhere between:
+
+Nike
+Chipotle
+Topgolf
+Apple Store
+Modern college student union
+
+Premium through design—not expensive materials.
+
+Physical Spaces
+
+The club consists of several signature spaces.
+
+Arrival Experience
+
+Large digital leaderboard wall.
+
+Digital check-in.
+
+Merch.
+
+Energy.
+
+Community announcements.
+
+Members should immediately feel like they are entering a club—not simply a gym.
+
+Clubhouse
+
+The social heart.
+
+Sports viewing.
+
+Community tables.
+
+Fantasy football drafts.
+
+Study.
+
+Homework.
+
+Conversations.
+
+Content creation.
+
+The place members stay after training.
+
+Performance Floor
+
+Real training.
+
+Strength.
+
+Competition.
+
+Large digital leaderboards.
+
+Open turf.
+
+Functional training.
+
+Coaching.
+
+Not rows of cardio equipment.
+
+Fuel Station
+
+Affordable nutrition.
+
+Self-service.
+
+Very lean staffing.
+
+Protein dispensers.
+
+Coffee.
+
+Healthy vending.
+
+Meal prep.
+
+Target pricing:
+
+Protein serving approximately $2.
+
+Outdoor Patio
+
+Community gathering area.
+
+Large projector.
+
+Watch parties.
+
+Fire pits.
+
+Relaxing seating.
+
+Small basketball court.
+
+Outdoor games.
+
+This should become one of the signature spaces.
+
+The App (PrimalTrack)
+
+The existing PrimalTrack app will become the operating system of the club.
+
+The app is NOT just a workout tracker.
+
+It powers the entire experience.
+
+Functions include:
+
+Digital entry
+Workout logging
+Verified PRs
+Event registration
+Community feed
+Leaderboards
+Rewards
+Challenges
+Member profiles
+Nutrition
+Club announcements
+Our Biggest Differentiator
+
+We are NOT building another leaderboard app.
+
+We are building a motivation platform.
+
+Most fitness platforms reward the strongest.
+
+We want to reward the people who consistently improve.
+
+Progress is the product.
+
+Leaderboards
+
+The app should emphasize improvement over raw strength.
+
+Examples:
+
+Most Improved Bench
+Most Improved Squat
+Biggest Monthly Progress
+Longest Workout Streak
+Community MVP
+Most Challenges Completed
+Attendance
+Verified PRs
+Team Competitions
+
+Leaderboards should exist at multiple levels:
+
+Friends
+Family
+Local Club
+City
+State
+Region
+National
+
+As well as filtered by:
+
+Age
+Weight class
+Gender
+Sport
+School
+Experience level
+
+Every member should have a realistic opportunity to appear on a leaderboard.
+
+Rewards
+
+Community participation should earn rewards.
+
+Examples:
+
+Membership discounts
+Protein credits
+Merchandise
+Event access
+Recognition
+Club status
+Digital badges
+Current Status
+
+The attached Vision Boards represent Version 1 of the concept.
+
+They are conversation starters—not finished products.
+
+We will continue refining every space.
+
+How I'd Like You to Help
+
+Going forward, I want you to function as my product design partner.
+
+Help me:
+
+Improve the physical club
+Improve the member experience
+Improve PrimalTrack
+Improve the UI/UX
+Keep everything visually consistent
+Challenge assumptions
+Suggest better ideas
+Think like a startup founder—not just a designer
+
+When suggesting ideas, optimize for:
+
+Affordability
+Scalability
+Community
+Simplicity
+Teen appeal
+Parent trust
+Long-term brand value
+
+Never hesitate to push back if you think a better solution exists.
+
+Our objective is not simply to build a gym.
+
+Our objective is to build a fitness brand that people genuinely love.
+
+One addition I'd make
+
+I would also upload the vision boards and include one simple instruction at the end:
+
+These vision boards are our current source of truth. Treat them as Version 1. Every future change should build on this foundation rather than starting over.
+
+That gives Replit a stable design baseline while leaving room for iteration.
+
+One more suggestion: I think it's time to retire the name Project Clubhouse internally. Even before you settle on a final brand with Grant, I'd give the initiative a codename like Project Forge or Project Iron. It creates a stronger identity for the work you're doing together without locking you into a public-facing name too early.
