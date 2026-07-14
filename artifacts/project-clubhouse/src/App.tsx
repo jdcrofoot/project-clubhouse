@@ -3,6 +3,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import NotFound from '@/pages/not-found';
 import Home from '@/pages/Home';
+import ArrivalExperience from '@/pages/spaces/ArrivalExperience';
 import PerformanceFloor from '@/pages/spaces/PerformanceFloor';
 import Clubhouse from '@/pages/spaces/Clubhouse';
 import FuelStation from '@/pages/spaces/FuelStation';
@@ -16,6 +17,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/spaces/arrival-experience" component={ArrivalExperience} />
       <Route path="/spaces/performance-floor" component={PerformanceFloor} />
       <Route path="/spaces/clubhouse" component={Clubhouse} />
       <Route path="/spaces/fuel-station" component={FuelStation} />

@@ -29,7 +29,8 @@ import {
 import { Navbar } from "@/components/Navbar";
 import { Link } from "wouter";
 
-import imgHero from "@assets/ChatGPT_Image_Jul_14,_2026,_12_50_52_PM_1784052604353.png";
+import imgHero from "@assets/15EB68E0-3FA6-46B6-BD2D-7537459C86F8_1784062882601.png";
+import imgArrival from "@assets/15EB68E0-3FA6-46B6-BD2D-7537459C86F8_1784062882601.png";
 import imgPerformanceFloor from "@assets/ChatGPT_Image_Jul_14,_2026,_12_51_10_PM_1784052604352.png";
 import imgClubhouse from "@assets/ChatGPT_Image_Jul_14,_2026,_12_51_02_PM_1784052604353.png";
 import imgFuelStation from "@assets/ChatGPT_Image_Jul_14,_2026,_12_51_25_PM_1784052604352.png";
@@ -227,6 +228,7 @@ const WhyWeExist = () => {
 // ─── Chapter 2: The Experience (Spaces) ───────────────────────────────────────
 const Spaces = () => {
   const spaces = [
+    { title: "The Arrival Experience", img: imgArrival, desc: "Walk in. See the energy. A 20' LED leaderboard wall, mobile check-in, and a lobby that tells you exactly where you are — somewhere different.", link: "/spaces/arrival-experience" },
     { title: "The Performance Floor", img: imgPerformanceFloor, desc: "Strength training, open turf, and a massive digital leaderboard wall. Competition and encouragement — side by side.", link: "/spaces/performance-floor" },
     { title: "The Clubhouse", img: imgClubhouse, desc: "Big screens, community tables, and lounge seating. The social heart of the club — where you come even when you skip the workout.", link: "/spaces/clubhouse" },
     { title: "The Fuel Station", img: imgFuelStation, desc: "Self-serve nutrition. $2 protein shakes, real food, coffee. High quality, low price, no friction.", link: "/spaces/fuel-station" },
@@ -244,7 +246,7 @@ const Spaces = () => {
         >
           <div>
             <h2 className="font-display text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter leading-none">
-              4 Zones.<br />
+              5 Zones.<br />
               <span className="text-primary">1 Clubhouse.</span>
             </h2>
           </div>
