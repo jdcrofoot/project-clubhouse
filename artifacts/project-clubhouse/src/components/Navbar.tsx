@@ -25,11 +25,11 @@ export const Navbar = () => {
   };
 
   const navLinks = [
-    { label: "Experience", hash: "experience" },
-    { label: "The Club", hash: "spaces" },
+    { label: "Vision", hash: "vision" },
+    { label: "The Spaces", hash: "spaces" },
     { label: "PrimalTrack", hash: "app" },
     { label: "Community", hash: "community" },
-    { label: "Membership", hash: "pricing" },
+    { label: "Membership", hash: "membership" },
   ];
 
   return (

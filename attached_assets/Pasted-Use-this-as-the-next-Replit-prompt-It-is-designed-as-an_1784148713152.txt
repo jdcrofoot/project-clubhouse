@@ -1,0 +1,924 @@
+Use this as the next Replit prompt. It is designed as an **evolution of the current website**, not a redesign from scratch.
+
+---
+
+# Project Clubhouse Website — Strategy and Storytelling Evolution
+
+## Context
+
+Project Clubhouse has evolved significantly since the current website was first created.
+
+The original concept centered on a fitness club with a social lounge and an integrated workout app.
+
+The concept is now broader and clearer:
+
+> **Project Clubhouse is a membership-based third place built around fitness, community, presence, and belonging.**
+
+The performance floor remains essential. Fitness is the common language and the reason many members first walk through the door.
+
+However, the larger value proposition is that Project Clubhouse becomes the place where teenagers, young adults, parents, athletes, students, mentors, and community members naturally choose to spend time.
+
+Members may come to:
+
+* Train
+* Watch a game
+* Meet friends
+* Study
+* Join a pickup basketball game
+* Attend an event
+* Grab an affordable protein shake
+* Participate in a Link Up
+* Connect with a team or Circle
+* Simply hang out in a healthy, active environment
+
+The website should now communicate this complete vision.
+
+---
+
+# Primary Instruction
+
+Update the existing Project Clubhouse website using the current codebase and design system.
+
+Do **not** rebuild the site from scratch.
+
+Preserve the strongest existing elements:
+
+* Black visual foundation
+* Neon green accents
+* Bold condensed typography
+* Industrial architecture
+* Cinematic imagery
+* Sports-inspired energy
+* Premium visual presentation
+* Existing animations where they remain useful
+* Existing responsive structure
+* Current Project Clubhouse identity
+
+This should feel like the same brand with a much clearer and more differentiated business concept.
+
+Before making changes:
+
+1. Audit the existing site structure and components.
+2. Identify which sections can be retained, revised, reordered, or removed.
+3. Preserve all reusable working code.
+4. Create a checkpoint before implementation.
+5. Keep the changes reversible.
+
+---
+
+# The Core Positioning
+
+The website should no longer present Project Clubhouse primarily as:
+
+* A better gym
+* A workout app
+* A fitness center with extra amenities
+
+Instead, it should present Project Clubhouse as:
+
+> **The modern third place where people train, connect, and keep showing up.**
+
+Supporting ideas:
+
+> **Fitness is our common ground. Community is our advantage.**
+
+> **Come for the workout. Stay for the community.**
+
+> **Digital amplifies real life.**
+
+> **Presence creates participation.**
+
+> **Project Clubhouse does not replace real friendships. It creates more opportunities for them to happen.**
+
+Do not use all of these lines at once. Selectively place them where they strengthen the story.
+
+---
+
+# Recommended Website Narrative
+
+Reorganize the website into the following story.
+
+## 1. Hero — The Big Idea
+
+The hero must communicate the concept immediately.
+
+Recommended headline direction:
+
+# MORE THAN A GYM.
+
+# THE PLACE TO SHOW UP.
+
+Alternative:
+
+# TRAIN. CONNECT. BELONG.
+
+Supporting copy:
+
+> A modern fitness and social club where members train, watch the game, study, meet friends, join activities, and become part of a real community.
+
+Primary CTA:
+
+**Explore the Club**
+
+Secondary CTA:
+
+**See How It Works**
+
+Avoid leading with “Join Now” before visitors understand the concept.
+
+The hero imagery should feature:
+
+* The performance floor clearly visible
+* The Clubhouse sportsbook lounge
+* Diverse members
+* A Pulse Board or digital leaderboard
+* A sense that the entire building is active
+
+The first impression should remain fitness-forward while clearly showing that the experience extends beyond the workout.
+
+---
+
+## 2. The Problem — Where Do People Go?
+
+Create a concise section explaining the gap Project Clubhouse fills.
+
+Suggested headline:
+
+# THE PLACES PEOPLE USED TO GATHER ARE DISAPPEARING.
+
+Supporting ideas:
+
+* Traditional community centers feel outdated or have disappeared.
+* Restaurants require ongoing spending and are not designed for teenagers to stay for hours.
+* Libraries no longer function as the default social-study destination for many students.
+* Most gyms are designed for people to work out and leave.
+* Digital platforms connect people online but often leave them isolated in real life.
+
+End with:
+
+> Project Clubhouse creates a safe, active, affordable place where people can spend meaningful time together.
+
+Keep this section optimistic. Do not make it sound like a societal crisis manifesto.
+
+---
+
+## 3. The Value Proposition — One Membership, Many Reasons to Come
+
+Create a section that makes the breadth of the experience easy to understand.
+
+Suggested headline:
+
+# ONE MEMBERSHIP. MORE REASONS TO SHOW UP.
+
+Use a visual grid or journey showing:
+
+* Train
+* Watch
+* Study
+* Connect
+* Play
+* Refuel
+* Participate
+* Belong
+
+Each should have one short description.
+
+Example:
+
+### Train
+
+A serious performance floor built for progress at every level.
+
+### Watch
+
+A sportsbook-inspired Clubhouse with large screens and shared game-day energy.
+
+### Study
+
+Tables, strong Wi-Fi, and focus spaces designed for school or work.
+
+### Connect
+
+See who is at the club and naturally cross paths with teammates, mentors, and friends.
+
+### Play
+
+Pickup basketball, outdoor activities, and member-created Link Ups.
+
+### Refuel
+
+Affordable protein, hydration, and healthy self-service options.
+
+### Participate
+
+Events, Circles, challenges, watch parties, and spontaneous activities.
+
+### Belong
+
+A place where members become known through showing up.
+
+---
+
+# 4. The Spaces
+
+Update the current spaces section using the new vision boards and strategy.
+
+Each major space should have its own strong visual and concise story.
+
+## Arrival Experience
+
+Positioning:
+
+> Walk in and immediately feel that something is happening.
+
+Show:
+
+* Pulse Boards
+* Live club activity
+* Member recognition
+* Mobile check-in
+* Friends arriving together
+* Diverse members and families
+* Local events and PR updates
+
+Key message:
+
+> You do not enter anonymously. You enter a living club.
+
+---
+
+## Performance Floor
+
+This should remain the physical anchor of the concept.
+
+Positioning:
+
+> Serious training without the intimidation.
+
+Show:
+
+* Racks and free weights
+* Functional turf
+* Female and male athletes
+* Teenagers, adults, beginners, and experienced lifters
+* Mentorship and spotting
+* Digital PR displays
+* Progress-focused leaderboards
+
+Key message:
+
+> Built for people who want to improve—not only people who are already elite.
+
+Do not position the space as dependent on personal training or expensive coaching.
+
+---
+
+## The Clubhouse Lounge
+
+This should become one of the most prominent sections on the site.
+
+Positioning:
+
+> The living room of the club.
+
+Maintain the sportsbook feel:
+
+* Multiple large sports screens
+* Comfortable lounge seating
+* Community tables
+* Local and national games
+* Fantasy drafts
+* Watch parties
+* Food and protein nearby
+* Pulse Boards and Clubhouse activity displays
+
+Also show:
+
+* Students studying
+* Adults working
+* Parents talking
+* Members hanging out before or after training
+* Teammates gathering
+
+Avoid:
+
+* Alcohol imagery
+* Gambling imagery
+* Dedicated gaming-room emphasis
+* Buffalo Wild Wings-style script typography
+* Full restaurant positioning
+
+Key message:
+
+> Come for the game, the people, or simply a place to be.
+
+---
+
+## Study and Focus Spaces
+
+Positioning:
+
+> Focus when you need it. Community when you want it.
+
+Show:
+
+* Individual phone-booth-style pods
+* Group study tables
+* Homework
+* Virtual classes
+* Laptop work
+* Strong Wi-Fi and power
+* Reservation through the app
+
+Do not overstate this as coworking. It is an integrated supporting space, not WeWork with barbells.
+
+---
+
+## Fuel Station
+
+Positioning:
+
+> Real fuel. Low friction. Fair prices.
+
+Show:
+
+* Approximately $2 self-service protein servings
+* Refrigerated healthy foods
+* Hydration
+* Coffee
+* Protein snacks
+* Mobile pay
+* Fuel credits
+* Minimal staffing
+
+Emphasize:
+
+* Affordability
+* Speed
+* Transparent pricing
+* Healthy convenience
+
+Do not make it look like:
+
+* A full restaurant
+* A staffed smoothie bar
+* A premium wellness café
+* A complex meal-service operation
+
+Food plans or prepared meals may be mentioned only as a future possibility, not a core launch promise.
+
+---
+
+## Outdoor Patio and Court
+
+Positioning:
+
+> An outdoor extension of the Clubhouse.
+
+Show:
+
+* Relaxed seating
+* Tables
+* Large outdoor screen
+* Watch parties
+* Movie nights
+* Fire features
+* Shade
+* Small basketball court separated from lounge seating
+* Informal Link Ups
+* Adults and teens using the space together
+
+Key message:
+
+> A place to stay after the workout—not just cool down and leave.
+
+---
+
+## Pulse Boards
+
+Add a dedicated section for the building’s digital display system.
+
+Suggested headline:
+
+# THE CLUB HAS A PULSE.
+
+Explain that screens throughout the building will rotate content such as:
+
+* Live member activity
+* Today’s PRs
+* Most Improved
+* Upcoming Link Ups
+* Tonight’s events
+* Circle activity
+* Local sports schedules
+* Welcome messages
+* Member milestones
+* Club-versus-club rankings in the future
+
+The screens should feel like:
+
+> ESPN and a premium sportsbook built around the members themselves.
+
+Clarify that this is not ordinary digital signage. It is part of the experience.
+
+---
+
+# 5. PrimalTrack — The Digital Layer
+
+Reframe PrimalTrack again.
+
+Do not present it merely as a workout app or even only as a “progress engine.”
+
+Suggested headline:
+
+# THE CLUB, IN YOUR POCKET.
+
+Supporting copy:
+
+> PrimalTrack connects the physical and digital experience—helping members train, see who is at the club, discover what is happening, join activities, track progress, and stay connected to their Circles.
+
+Show these five experiences:
+
+### Train
+
+Log workouts and follow your progress.
+
+### Progress
+
+Track improvement, consistency, milestones, and personal records.
+
+### Compete
+
+Join progress-first leaderboards and challenges.
+
+### Club Live
+
+See what is happening at the club right now.
+
+### Connect
+
+Discover your people, Circles, events, and Link Ups.
+
+Use actual updated app screenshots or refined phone mockups.
+
+---
+
+# 6. Your People, Circles and Presence
+
+This deserves its own website section because it is a major differentiator.
+
+Suggested headline:
+
+# KNOW WHEN YOUR PEOPLE ARE HERE.
+
+Visual example:
+
+> 3 Football teammates are here
+> 1 Wrestling teammate is here
+> Your lifting mentor checked in
+> Pickup basketball needs 2 more
+> Bench Club starts in 20 minutes
+
+Explain:
+
+* Members control their visibility.
+* Friends and Circle members appear first.
+* Exact indoor location is never required.
+* Minors use safer privacy defaults.
+* The goal is awareness—not surveillance.
+
+Positioning statement:
+
+> The app does not create friendships. It makes the real-world opportunities for friendship easier to see.
+
+---
+
+## Circles
+
+Explain Circles as identity and affinity layers, not chat groups.
+
+Examples:
+
+* Football
+* Wrestling
+* Basketball
+* Strength Club
+* Running
+* Study Group
+* Entrepreneurs
+* Photography
+* Family
+* Watch Party
+
+Circles influence:
+
+* Who appears in Your People
+* Suggested Link Ups
+* Activity
+* Challenges
+* Events
+* Leaderboards
+* Recommendations
+
+Avoid calling them “online communities.”
+
+They are real communities made more visible through software.
+
+---
+
+# 7. Link Ups
+
+Create a concise section showing how members can create spontaneous activities.
+
+Suggested headline:
+
+# MAKE A PLAN IN SECONDS.
+
+Examples:
+
+* Pickup Basketball — starts in 15 minutes
+* Upper Body — 2 spots open
+* Algebra Study — Study Pod B
+* Watch the Game — Clubhouse at 7
+* Coffee After Training
+* Patio Hangout
+
+Explain the distinction:
+
+> Events are organized by the club. Link Ups are created by members.
+
+No chat platform is necessary. Link Ups are intended to move people into real-world interaction.
+
+---
+
+# 8. Progress-First Competition
+
+Update the leaderboard section to reflect the current philosophy.
+
+Suggested headline:
+
+# EVERYONE SHOULD HAVE A WAY TO WIN.
+
+Highlight rankings such as:
+
+* Most Improved
+* Most Consistent
+* Fastest Rising
+* First Milestones
+* Most PRs
+* Challenge Leaders
+* Circle Standings
+* Club-versus-club rankings
+* Local, regional, state, and national rankings
+
+Raw strength can remain one category but should not dominate the section.
+
+Explain:
+
+> Traditional gyms celebrate the strongest person in the room. Project Clubhouse celebrates the people who keep showing up and getting better.
+
+Show sample cards rather than long paragraphs.
+
+---
+
+# 9. The Target Audience
+
+Create a clear section illustrating who the club is for.
+
+Suggested headline:
+
+# BUILT FOR MORE THAN ONE GENERATION.
+
+Primary audiences:
+
+### Teenagers and Young Adults
+
+An affordable place to train, study, see friends, and become part of something positive.
+
+### Parents
+
+A healthy, supervised environment they feel good paying for and allowing their children to spend time in.
+
+### Athletes and Teams
+
+A place to train, gather, watch film or games, and build team connection.
+
+### College Students and Young Professionals
+
+A social, fitness, study, and networking environment without the pressure of a bar or formal networking event.
+
+### Adults and Mentors
+
+A place to improve, connect, and naturally support younger members.
+
+Avoid making the concept appear youth-only. Youth are important, but a diverse age mix is part of what makes the model valuable.
+
+---
+
+# 10. Partnerships
+
+Add a section showing how Project Clubhouse can support existing communities.
+
+Suggested headline:
+
+# A HOME BASE FOR THE COMMUNITIES THAT ALREADY EXIST.
+
+Potential partners:
+
+* High schools
+* Athletic teams
+* Youth sports organizations
+* College clubs
+* Local employers
+* Community organizations
+* Churches
+* Health systems
+* Local sports media
+* Food and wellness brands
+
+Examples of value:
+
+* Team Circles
+* Shared training sessions
+* Watch parties
+* Study space
+* Local sports schedule coverage
+* Sponsored challenges
+* Group memberships
+* Community events
+
+Do not imply formal partnerships already exist.
+
+Present these as the future partnership model.
+
+---
+
+# 11. Affordability and Operating Model
+
+The website should clearly communicate that the club is intentionally designed to remain accessible.
+
+Suggested headline:
+
+# PREMIUM EXPERIENCE. ACCESSIBLE MEMBERSHIP.
+
+Supporting points:
+
+* Target membership near the range families can reasonably justify
+* Minimal unnecessary staffing
+* Self-service nutrition
+* Technology-enabled access
+* No expensive recovery spa at launch
+* No mandatory coaching or trainer model
+* No full restaurant
+* No luxury pricing structure
+* High-value spaces used throughout the day
+
+Do not publish a final exact price unless it has been decided.
+
+You may use:
+
+> Membership designed to remain accessible for teenagers, young adults, and families.
+
+The approximately $2 protein concept may remain because it communicates the operating philosophy clearly.
+
+---
+
+# 12. Safety and Trust
+
+Because the concept includes minors and extended stays, include a concise trust section.
+
+Suggested headline:
+
+# BUILT FOR FREEDOM. DESIGNED WITH SAFETY.
+
+Include:
+
+* Staffed and supervised environment
+* Check-in requirements
+* Parent-linked minor accounts
+* Privacy-controlled presence
+* Youth-safe defaults
+* Moderated club activity
+* Clear behavior standards
+* Security and visibility throughout the facility
+* Optional parent arrival and departure notifications
+
+Do not overpromise specific technology that has not been implemented.
+
+---
+
+# 13. The Business Flywheel
+
+Create a simple visual flywheel:
+
+More Members
+→ More Presence
+→ More Activity
+→ More Link Ups
+→ More Friendships
+→ Stronger Retention
+→ More Members
+
+Add:
+
+> The club becomes more valuable as the community becomes more active.
+
+This explains the network effect without startup jargon.
+
+---
+
+# 14. Final Vision Section
+
+Close emotionally.
+
+Suggested copy:
+
+# IMAGINE AFTER SCHOOL.
+
+Your teammates are already there.
+
+Your lifting mentor just checked in.
+
+A pickup basketball game needs one more player.
+
+The local game starts in twenty minutes.
+
+Your friends are studying at a community table.
+
+You train for an hour.
+
+Stay for three.
+
+Finish your homework.
+
+Grab a protein shake.
+
+Meet someone new.
+
+And leave already planning to come back tomorrow.
+
+> **That is not just a gym. That is Project Clubhouse.**
+
+CTA:
+
+**Help Us Build the First Clubhouse**
+
+Secondary CTA:
+
+**Explore the Vision**
+
+For now, avoid overly transactional membership CTAs unless the business is ready to collect real leads.
+
+---
+
+# Vision Board Updates
+
+Replace the current vision-board imagery with the updated Project Clubhouse boards while preserving the website’s existing visual quality.
+
+Required boards:
+
+1. Arrival Experience
+2. Performance Floor
+3. Clubhouse Lounge / Sportsbook
+4. Outdoor Patio
+5. Fuel Station
+6. PrimalTrack App
+7. Pulse Boards / Broadcast Network
+8. Community Ecosystem
+
+Representation requirements across the full image set:
+
+* Balanced male and female representation
+* Teenagers
+* College-age members
+* Young professionals
+* Parents
+* Older adult mentors
+* Multiple racial and ethnic backgrounds
+* Different body types
+* Beginners and experienced athletes
+* Authentic interaction rather than posed stock photography
+
+People should appear naturally engaged in:
+
+* Training
+* Spotting
+* Studying
+* Watching sports
+* Talking
+* Checking Pulse Boards
+* Using PrimalTrack
+* Drinking protein shakes
+* Joining Link Ups
+* Playing basketball
+* Mentoring
+* Simply hanging out
+
+Avoid making every person look like an elite fitness model.
+
+---
+
+# Remove or Reduce
+
+Reduce or remove outdated emphasis on:
+
+* PrimalTrack as the entire product
+* Generic “fitness app” language
+* Gaming areas
+* Merchandise as a major experience
+* Full-service food
+* Recovery-spa amenities
+* Personal training as a central business model
+* Raw-strength-only leaderboards
+* Formal networking language
+* Social-media features
+* Endless feeds, likes, followers, and comments
+* Generic gym-equipment copy
+* Luxury-club positioning
+* Script or sports-bar-style fonts
+
+---
+
+# Design and UX Requirements
+
+* Maintain current responsive behavior.
+* Ensure all sections look excellent on mobile.
+* Use shorter paragraphs and stronger visual storytelling.
+* Use actual UI mockups wherever possible.
+* Keep motion purposeful and restrained.
+* Do not create an overly long wall of text.
+* Use expandable areas or secondary pages for deeper details.
+* Preserve accessibility and sufficient contrast.
+* Optimize image loading.
+* Add clear alt text.
+* Ensure important content remains usable without animation.
+* Avoid horizontal scrolling except for intentional card carousels on mobile.
+
+---
+
+# Recommended Site Architecture
+
+Main navigation:
+
+* Vision
+* The Spaces
+* PrimalTrack
+* Community
+* Membership
+* About
+
+Optional secondary pages:
+
+* `/spaces`
+* `/primaltrack`
+* `/community`
+* `/vision`
+* `/partners`
+* `/membership`
+
+Keep the homepage focused on the emotional and strategic story. Move deeper explanations to supporting pages where appropriate.
+
+---
+
+# Deliverables
+
+Before completing implementation, provide:
+
+1. Existing-site audit
+2. Revised sitemap
+3. Proposed homepage section order
+4. List of sections being retained, modified, removed, or added
+5. Updated copy
+6. Updated image and vision-board placements
+7. Responsive screenshots
+8. Mobile verification
+9. Accessibility check
+10. Final summary of code changes
+11. Rollback checkpoint
+
+Do not remove any useful existing page without preserving it in version history.
+
+---
+
+# Final Product Test
+
+After updating the site, a new visitor should be able to answer these questions within approximately one minute:
+
+1. What is Project Clubhouse?
+2. Why is it different from a traditional gym?
+3. Who is it for?
+4. Why would someone stay longer than their workout?
+5. How does PrimalTrack improve the physical club?
+6. How do presence, Circles, Link Ups, and Pulse Boards build community?
+7. Why would a parent pay for this?
+8. Why would a teenager or young adult actually want to go?
+9. How is the concept designed to remain affordable?
+10. Why does the experience become more valuable as more people join?
+
+The final website should leave visitors with one central feeling:
+
+> **Project Clubhouse is where people go to get stronger, find their people, and keep showing up.**
+
+---
+
+I could not reliably inspect the latest repository contents from the GitHub URL during this turn, so this prompt is grounded in the website iterations and product strategy we developed together rather than a fresh file-by-file audit of the current codebase.
