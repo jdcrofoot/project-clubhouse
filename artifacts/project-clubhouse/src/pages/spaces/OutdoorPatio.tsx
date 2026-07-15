@@ -57,10 +57,6 @@ export default function OutdoorPatio() {
             alt="Outdoor Patio Vision"
             className="w-full h-auto block"
           />
-          <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between p-8 bg-gradient-to-t from-black/80 to-transparent">
-            <span className="font-display text-xs uppercase tracking-[0.3em] text-primary font-bold">Vision Board · Zone 04</span>
-            <span className="font-display text-xs uppercase tracking-widest text-white/50">The Outdoor Patio</span>
-          </div>
         </div>
       </section>
 
