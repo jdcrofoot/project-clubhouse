@@ -1,0 +1,45 @@
+I’m uploading the complete Project Clubhouse image library.
+
+Please:
+
+1. Extract the ZIP and place the images in an organized public asset directory, preserving the existing folder structure.
+
+2. Read the included README before making any website changes.
+
+3. Default to the images in:
+   02-pilot/
+
+These represent the realistic first Project Clubhouse location we could build in Prior Lake within the next 1–3 years.
+
+4. Treat images in:
+   01-aspirational/
+
+as future-state imagery only. Do not use these on pages describing the pilot location unless the section is explicitly labeled “Future Vision” or similar.
+
+5. Review the current website and recommend specific image replacements by:
+   - Page
+   - Section
+   - Current image
+   - Recommended new filename
+   - Reason for the selection
+
+6. Do not make the replacements yet. First present the proposed image-placement plan for my approval.
+
+Image-selection priorities:
+- Lead with the realistic pilot clubhouse.
+- Emphasize the workout floor, Pulse leaderboards, sportsbook-inspired clubhouse, study spaces, fuel station and community experience.
+- Show middle-school through college-aged members.
+- Balance fitness with belonging, mentorship, studying and relaxed social time.
+- Avoid making the pilot look like a luxury athletic club.
+- Do not use imagery or language that suggests gambling, alcohol or a sports bar.
+- Preserve the established black, industrial and cinematic identity with restrained neon-green accents.
+
+Technical requirements:
+- Use descriptive alt text.
+- Preserve image aspect ratios.
+- Use responsive image sizing and object-position adjustments where necessary.
+- Optimize images for web performance without visibly reducing quality.
+- Do not duplicate the same image across multiple prominent sections.
+- Do not change existing copy, layouts or functionality during this first review.
+
+After reviewing the library and current site, provide the placement plan and wait for approval.
