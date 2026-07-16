@@ -54,10 +54,9 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="text-lg md:text-2xl text-muted-foreground font-light mb-12 max-w-3xl font-display tracking-widest uppercase"
+          className="text-lg md:text-2xl text-muted-foreground font-light mb-12 max-w-2xl font-display tracking-widest uppercase"
         >
-          A modern fitness and social club where members train, watch the game,
-          study, meet friends, join activities, and become part of a real community.
+          Fitness is the invitation.<br />Belonging is the reason people stay.
         </motion.p>
 
         <motion.div
@@ -67,10 +66,10 @@ const Hero = () => {
           className="flex flex-col sm:flex-row gap-4"
         >
           <Button size="lg" className="text-xl md:text-2xl px-12 h-16 md:h-20 font-black" onClick={() => document.getElementById("spaces")?.scrollIntoView({ behavior: "smooth" })}>
-            Explore the Club <ArrowRight className="ml-3 w-6 h-6 md:w-8 md:h-8" />
+            Walk Through the Spaces <ArrowRight className="ml-3 w-6 h-6 md:w-8 md:h-8" />
           </Button>
           <Button size="lg" variant="outline" className="text-xl md:text-2xl px-12 h-16 md:h-20 font-black border-white/20 hover:border-primary hover:text-primary" onClick={() => document.getElementById("vision")?.scrollIntoView({ behavior: "smooth" })}>
-            See How It Works
+            See the Vision
           </Button>
         </motion.div>
       </div>
@@ -137,16 +136,16 @@ const TheProblem = () => (
           <span className="text-primary">Are Disappearing.</span>
         </h2>
         <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed max-w-3xl">
-          Community centers have closed. Libraries are no longer the default gathering spot. Restaurants require ongoing spending and aren't designed for teenagers to stay for hours. Most gyms are built for people to work out and leave.
+          Community centers have closed. Most gyms are built for people to work out and leave. The result is a generation with nowhere to actually go.
         </p>
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-20 md:mb-32">
         {[
-          { label: "Traditional Gyms", issue: "Designed to work out and leave. Not built for community." },
-          { label: "Social Media", issue: "Connects people online. Often leaves them isolated in real life." },
+          { label: "Traditional Gyms", issue: "Work out and leave. Not built for community." },
+          { label: "Social Media", issue: "Connects people online. Leaves them isolated in real life." },
           { label: "Restaurants", issue: "Not designed for teenagers to spend three hours." },
-          { label: "Nothing Else", issue: "No affordable, active, supervised alternative exists." },
+          { label: "Nothing Else", issue: "No affordable, active alternative exists." },
         ].map((item, i) => (
           <motion.div
             key={i}
@@ -170,7 +169,7 @@ const TheProblem = () => (
         className="border border-primary/30 bg-primary/5 p-10 md:p-16 max-w-4xl"
       >
         <p className="font-display text-3xl md:text-5xl font-black uppercase tracking-tighter leading-tight text-white">
-          Project Clubhouse creates a safe, active, affordable place where people can spend meaningful time together.
+          Project Clubhouse is a safe, active, affordable place where people spend meaningful time together.
         </p>
         <p className="text-xl text-primary font-display uppercase tracking-widest font-bold mt-6">
           Fitness is our common ground. Community is our advantage.
@@ -183,14 +182,14 @@ const TheProblem = () => (
 // ─── Chapter 1b: Value Proposition Grid ──────────────────────────────────────
 const ValuePropGrid = () => {
   const items = [
-    { icon: <Dumbbell className="w-8 h-8" />, label: "Train", desc: "A serious performance floor built for progress at every level — beginner to athlete." },
-    { icon: <Tv className="w-8 h-8" />, label: "Watch", desc: "A sportsbook-inspired Clubhouse with large screens and real game-day energy." },
-    { icon: <BookOpen className="w-8 h-8" />, label: "Study", desc: "Tables, strong Wi-Fi, and quiet focus spaces designed for school or work." },
-    { icon: <Users className="w-8 h-8" />, label: "Connect", desc: "See who's at the club and naturally cross paths with teammates, mentors, and friends." },
+    { icon: <Dumbbell className="w-8 h-8" />, label: "Train", desc: "A serious performance floor built for every level — beginner to athlete." },
+    { icon: <Tv className="w-8 h-8" />, label: "Watch", desc: "Sportsbook-inspired screens and real game-day energy." },
+    { icon: <BookOpen className="w-8 h-8" />, label: "Study", desc: "Tables, strong Wi-Fi, and quiet spaces for school or work." },
+    { icon: <Users className="w-8 h-8" />, label: "Connect", desc: "See who's here and naturally cross paths with teammates, mentors, and friends." },
     { icon: <Play className="w-8 h-8" />, label: "Play", desc: "Pickup basketball, outdoor activities, and member-created Link Ups." },
-    { icon: <Coffee className="w-8 h-8" />, label: "Refuel", desc: "Affordable protein, hydration, and healthy self-service options. $2 shakes. No friction." },
-    { icon: <CalendarDays className="w-8 h-8" />, label: "Participate", desc: "Events, Circles, challenges, watch parties, and spontaneous activities every week." },
-    { icon: <Heart className="w-8 h-8" />, label: "Belong", desc: "A place where members become known — not by what they post, but by showing up." },
+    { icon: <Coffee className="w-8 h-8" />, label: "Refuel", desc: "$2 shakes. Real food. No friction." },
+    { icon: <CalendarDays className="w-8 h-8" />, label: "Participate", desc: "Events, Circles, challenges, and watch parties every week." },
+    { icon: <Heart className="w-8 h-8" />, label: "Belong", desc: "Become known by showing up — not by what you post." },
   ];
 
   return (
@@ -244,11 +243,11 @@ const ValuePropGrid = () => {
 // ─── Chapter 2a: The Spaces ───────────────────────────────────────────────────
 const Spaces = () => {
   const spaces = [
-    { title: "The Arrival Experience", img: imgArrival, desc: "Walk in and immediately feel that something is happening. Pulse Boards, live club activity, member recognition, and mobile check-in — all before you lift a weight.", link: "/spaces/arrival-experience" },
-    { title: "The Performance Floor", img: imgPerformanceFloor, desc: "Serious training without the intimidation. Racks, turf, digital PRs, and coaching for every level — from first rep to personal record.", link: "/spaces/performance-floor" },
-    { title: "The Clubhouse Lounge", img: imgClubhouse, desc: "Come for the game, the people, or simply a place to be. Big screens, community tables, lounge seating, and the social heart of the club.", link: "/spaces/clubhouse" },
-    { title: "The Fuel Station", img: imgFuelStation, desc: "Real fuel. Low friction. Fair prices. Self-serve protein, food, coffee, and hydration — designed for speed and transparency.", link: "/spaces/fuel-station" },
-    { title: "The Outdoor Patio", img: imgOutdoorPatio, desc: "A place to stay after the workout — not just cool down and leave. Fire pits, basketball, string lights, outdoor screens, and open air.", link: "/spaces/outdoor-patio" },
+    { title: "The Arrival Experience", img: imgArrival, desc: "Walk in and immediately feel that something is happening. Pulse Boards, live activity, member recognition — all before you lift a weight.", link: "/spaces/arrival-experience" },
+    { title: "The Performance Floor", img: imgPerformanceFloor, desc: "Where beginners feel welcome and athletes feel challenged. Racks, turf, digital PRs, and coaching for every level.", link: "/spaces/performance-floor" },
+    { title: "The Clubhouse Lounge", img: imgClubhouse, desc: "The place you'll still be sitting two hours after your workout. Big screens, community tables, and the social heart of the club.", link: "/spaces/clubhouse" },
+    { title: "The Fuel Station", img: imgFuelStation, desc: "Healthy shouldn't cost $12. Self-serve protein, food, coffee, and hydration at prices that actually make sense.", link: "/spaces/fuel-station" },
+    { title: "The Outdoor Patio", img: imgOutdoorPatio, desc: "Some of the best conversations happen after the workout ends. Fire pits, basketball, string lights, and open air.", link: "/spaces/outdoor-patio" },
   ];
 
   return (
@@ -329,17 +328,14 @@ const PulseBoards = () => {
             viewport={{ once: true, margin: "-100px" }}
           >
             <div className="inline-flex items-center gap-3 px-5 py-2 border border-primary/40 text-primary font-display text-sm tracking-widest uppercase font-bold mb-10">
-              <Activity className="w-4 h-4" /> Pulse Boards
+              <Activity className="w-4 h-4" /> Never wonder who's here again.
             </div>
             <h2 className="font-display text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-8">
               The Club<br />
               <span className="text-primary">Has a Pulse.</span>
             </h2>
-            <p className="text-xl text-muted-foreground font-light leading-relaxed mb-8 max-w-xl">
-              Screens throughout the building rotate live content — PRs, activity, events, shoutouts, and standings. Not digital signage. Part of the experience.
-            </p>
-            <p className="text-lg text-muted-foreground font-light leading-relaxed max-w-xl">
-              Think ESPN and a premium sportsbook — built entirely around the members themselves.
+            <p className="text-xl text-muted-foreground font-light leading-relaxed max-w-xl">
+              Screens throughout the building rotate live content — PRs, activity, events, shoutouts, and standings. Think ESPN meets a premium sportsbook — built entirely around the members themselves.
             </p>
           </motion.div>
 
@@ -409,7 +405,7 @@ const YourPeople = () => {
           className="mb-16 md:mb-24 max-w-4xl"
         >
           <div className="inline-flex items-center gap-3 px-5 py-2 border border-primary/40 text-primary font-display text-sm tracking-widest uppercase font-bold mb-10">
-            <Users className="w-4 h-4" /> Circles & Presence
+            <Users className="w-4 h-4" /> Find Your People.
           </div>
           <h2 className="font-display text-5xl md:text-7xl lg:text-[8rem] font-black uppercase tracking-tighter leading-none mb-8">
             Know When<br />
@@ -417,7 +413,7 @@ const YourPeople = () => {
             <span className="text-primary">Are Here.</span>
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed max-w-3xl">
-            The app does not create friendships. It makes the real-world opportunities for friendship easier to see.
+            The app doesn't create friendships. It makes real-world opportunities for friendship easier to see.
           </p>
         </motion.div>
 
@@ -450,7 +446,7 @@ const YourPeople = () => {
 
             <div className="mt-8 p-6 border border-white/5 bg-card">
               <p className="text-muted-foreground text-sm font-display uppercase tracking-widest mb-2">Privacy First</p>
-              <p className="text-base text-white/70 font-light leading-relaxed">Members control their own visibility. Friends and Circle members appear first. Exact indoor location is never required. Minors use safer privacy defaults by default.</p>
+              <p className="text-base text-white/70 font-light leading-relaxed">Members control their own visibility. Minors use safer privacy defaults automatically.</p>
             </div>
           </motion.div>
 
@@ -463,7 +459,7 @@ const YourPeople = () => {
           >
             <h3 className="font-display text-3xl font-black uppercase tracking-tight mb-4 text-primary">Circles</h3>
             <p className="text-lg text-muted-foreground font-light leading-relaxed mb-8">
-              Circles are identity layers — not chat groups. They shape who appears in Your People, which Link Ups you see, and what challenges you can join. They are real communities made more visible through software.
+              Circles are real communities made visible through software — not chat groups. They shape who you see, which Link Ups appear, and which challenges you can join.
             </p>
             <div className="flex flex-wrap gap-3 mb-8">
               {circles.map((c, i) => (
@@ -514,8 +510,8 @@ const LinkUps = () => {
             Make a Plan<br />
             <span className="text-primary">In Seconds.</span>
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed max-w-2xl mb-6">
-            Events are organized by the club. Link Ups are created by members. No chat platform required — Link Ups move people into real-world interaction.
+          <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed max-w-2xl">
+            No group chat required. Link Ups move people into real-world interaction.
           </p>
         </motion.div>
 
@@ -545,11 +541,12 @@ const LinkUps = () => {
 // ─── Chapter 4: PrimalTrack ──────────────────────────────────────────────────
 const MotivationEngine = () => {
   const pillars = [
-    { icon: <Dumbbell className="w-5 h-5" />, label: "Train", desc: "Log workouts, track sets, and follow your progress over time." },
-    { icon: <TrendingUp className="w-5 h-5" />, label: "Progress", desc: "Track improvement, consistency, milestones, and personal records." },
-    { icon: <Trophy className="w-5 h-5" />, label: "Compete", desc: "Join progress-first leaderboards and Circle challenges." },
-    { icon: <Activity className="w-5 h-5" />, label: "Club Live", desc: "See what's happening at the club right now. Who's here. What's next." },
-    { icon: <Users className="w-5 h-5" />, label: "Connect", desc: "Discover your people, Circles, events, and Link Ups." },
+    { icon: <Activity className="w-5 h-5" />, label: "Club Live", desc: "Never wonder who's here again. See what's happening at the club right now." },
+    { icon: <CalendarDays className="w-5 h-5" />, label: "Link Ups", desc: "Make plans in seconds. See who's up for what tonight." },
+    { icon: <Users className="w-5 h-5" />, label: "Your People", desc: "Find your people. Circles, friends, and teammates — all in one place." },
+    { icon: <Dumbbell className="w-5 h-5" />, label: "Train", desc: "Log workouts and follow your progress over time." },
+    { icon: <TrendingUp className="w-5 h-5" />, label: "Progress", desc: "Track milestones, consistency, and personal records." },
+    { icon: <Trophy className="w-5 h-5" />, label: "Compete", desc: "Join leaderboards and Circle challenges built around improvement." },
   ];
 
   return (
@@ -570,9 +567,14 @@ const MotivationEngine = () => {
               The Club,<br />
               <span className="text-primary">In Your Pocket.</span>
             </h2>
-            <p className="text-xl text-muted-foreground font-light leading-relaxed max-w-xl">
-              PrimalTrack connects the physical and digital experience — helping members train, see who's at the club, discover what's happening, join activities, track progress, and stay connected to their Circles.
-            </p>
+            <div className="border-l-4 border-primary pl-6 space-y-2">
+              <p className="text-xl md:text-2xl text-white font-display font-black uppercase tracking-tight leading-tight">
+                Most fitness apps tell you what you did yesterday.
+              </p>
+              <p className="text-xl md:text-2xl text-primary font-display font-black uppercase tracking-tight leading-tight">
+                This one helps you decide where you'll be tonight.
+              </p>
+            </div>
             <div className="space-y-3 pt-2">
               {pillars.map((p, i) => (
                 <div key={i} className="flex items-start gap-4 p-4 bg-background border border-white/5 hover:border-primary/30 transition-all duration-200 group">
@@ -587,7 +589,7 @@ const MotivationEngine = () => {
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <Button size="lg" className="text-xl px-10 h-16 font-black" asChild>
                 <a href="https://primaltrack.replit.app" target="_blank" rel="noopener noreferrer">
-                  Launch PrimalTrack <ArrowRight className="ml-3 w-6 h-6" />
+                  Discover PrimalTrack <ArrowRight className="ml-3 w-6 h-6" />
                 </a>
               </Button>
             </div>
@@ -634,7 +636,7 @@ const Flywheel = () => {
             The Club Becomes<br /><span className="text-primary">More Valuable.</span>
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-2xl mx-auto leading-relaxed">
-            The club becomes more valuable as the community becomes more active. This is the network effect — without the startup jargon.
+            The more active the community, the more valuable the club — without the startup jargon.
           </p>
         </motion.div>
 
@@ -710,7 +712,7 @@ const LeaderboardCards = () => {
             <span className="text-primary">To Win.</span>
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground font-display tracking-widest uppercase max-w-3xl">
-            Traditional gyms celebrate the strongest person in the room. Project Clubhouse celebrates the people who keep showing up and getting better.
+            Celebrate the people who keep showing up — not just the strongest person in the room.
           </p>
         </motion.div>
 
@@ -802,7 +804,7 @@ const LeaderboardViz = () => {
           className="mb-16 md:mb-24"
         >
           <h2 className="font-display text-5xl md:text-7xl lg:text-[8rem] font-black uppercase tracking-tighter leading-none mb-6">
-            Everyone Has<br /><span className="text-primary">A Rank.</span>
+            See How Far<br /><span className="text-primary">You've Come.</span>
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground font-display tracking-widest uppercase max-w-3xl">
             From your friend group to the national stage. Filter by what matters to you.
@@ -900,14 +902,14 @@ const ProgressScore = () => (
           Not Just Raw Strength.
         </h2>
         <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-3xl mx-auto leading-relaxed">
-          Raw strength can remain one category — but it should never dominate. Every member who shows up consistently has a path to recognition.
+          Every member who shows up consistently has a path to recognition.
         </p>
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
         {[
           { title: "Most Improved", icon: <Flame className="w-12 h-12 text-background" />, desc: "Based on relative gains. Pushing your personal limits week over week? You will climb.", num: "01" },
-          { title: "Consistency", icon: <Activity className="w-12 h-12 text-background" />, desc: "Show up. Put in the reps. Consistency score tracks momentum over time — not just today.", num: "02" },
+          { title: "Consistency", icon: <Activity className="w-12 h-12 text-background" />, desc: "Show up. Put in the reps. Consistency score tracks momentum over time.", num: "02" },
           { title: "Community", icon: <Users className="w-12 h-12 text-background" />, desc: "Spot a friend. Join a Circle. Real growth goes way beyond the weights you lift.", num: "03" },
         ].map((item, i) => (
           <motion.div
@@ -949,7 +951,7 @@ const WhoIsThisFor = () => (
           Built for More Than<br /><span className="text-primary">One Generation.</span>
         </h2>
         <p className="text-2xl md:text-3xl text-muted-foreground font-display tracking-widest uppercase">
-          A diverse age mix is part of what makes the model valuable.
+          A diverse age mix is part of what makes the model work.
         </p>
       </motion.div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -959,11 +961,11 @@ const WhoIsThisFor = () => (
         </div>
         <div className="space-y-10">
           {[
-            { title: "Teenagers & Young Adults", desc: "An affordable place to train, study, see friends, and become part of something positive." },
-            { title: "Parents", desc: "A healthy, supervised environment they feel good paying for and allowing their children to spend time in." },
-            { title: "Athletes & Teams", desc: "Train together, watch film or games, and build team connection in a space designed for it." },
-            { title: "College Students & Young Professionals", desc: "A social, fitness, study, and networking environment without the pressure of a bar or formal event." },
-            { title: "Adults & Mentors", desc: "A place to improve, connect, and naturally support younger members by just being present." },
+            { title: "Teenagers & Young Adults", desc: "An affordable place to train, study, and become part of something positive." },
+            { title: "Parents", desc: "A healthy, supervised environment they feel good paying for." },
+            { title: "Athletes & Teams", desc: "Train, watch film, and build team connection in a space designed for it." },
+            { title: "College Students & Young Professionals", desc: "A social, fitness, and networking space without the pressure of a bar." },
+            { title: "Adults & Mentors", desc: "A place to improve and naturally support younger members just by being present." },
           ].map((group, i) => (
             <motion.div key={i} initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="border-l-4 border-white/10 hover:border-primary pl-8 md:pl-10 py-2 transition-colors duration-300">
               <h3 className="font-display text-3xl md:text-4xl font-black uppercase tracking-tight mb-2 leading-none text-white">{group.title}</h3>
@@ -976,9 +978,82 @@ const WhoIsThisFor = () => (
   </section>
 );
 
-// ─── Chapter 5b: Safety & Trust ───────────────────────────────────────────────
+// ─── Chapter 5b: Built for Parents ───────────────────────────────────────────
+const BuiltForParents = () => {
+  const afternoon = [
+    { time: "School ends.", accent: false },
+    { time: "Workout.", accent: false },
+    { time: "Homework.", accent: false },
+    { time: "Healthy food.", accent: false },
+    { time: "Friends.", accent: true },
+    { time: "Mentors.", accent: true },
+    { time: "Games.", accent: true },
+    { time: "Community.", accent: true },
+    { time: "Then home.", accent: false },
+  ];
+
+  return (
+    <section className="py-24 md:py-40 bg-secondary relative border-t border-white/5 overflow-hidden">
+      <div className="absolute inset-0 electric-grid opacity-10 pointer-events-none" />
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            <div className="inline-flex items-center gap-3 px-5 py-2 border border-primary/40 text-primary font-display text-sm tracking-widest uppercase font-bold mb-10">
+              <Heart className="w-4 h-4" /> For Families
+            </div>
+            <h2 className="font-display text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-8">
+              Built for Parents.<br />
+              <span className="text-primary">Loved by Teenagers.</span>
+            </h2>
+            <p className="text-xl text-muted-foreground font-light leading-relaxed max-w-xl mb-8">
+              Parents receive something genuinely rare: a safe place where teenagers actually want to spend time.
+            </p>
+            <p className="text-xl text-muted-foreground font-light leading-relaxed max-w-xl">
+              Not because they have to. Because the Clubhouse gives them something worth showing up for — and people worth showing up with.
+            </p>
+            <div className="mt-10 p-6 border border-primary/20 bg-primary/5">
+              <p className="font-display text-lg font-black uppercase tracking-tight text-primary mb-2">Confidence &amp; Peace of Mind</p>
+              <p className="text-muted-foreground font-light leading-relaxed">A staffed, active environment where teenagers build healthy habits, real friendships, and a sense of belonging — all in one place.</p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="space-y-0"
+          >
+            <p className="font-display text-sm uppercase tracking-[0.3em] text-muted-foreground font-bold mb-8">An afternoon at the Clubhouse looks like this:</p>
+            {afternoon.map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.07 }}
+                className={`py-4 border-b font-display font-black uppercase tracking-tighter leading-none transition-colors ${
+                  item.accent
+                    ? "text-3xl md:text-4xl text-primary border-primary/20"
+                    : "text-2xl md:text-3xl text-white/60 border-white/5"
+                }`}
+              >
+                {item.time}
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// ─── Chapter 5c: Safety & Trust ───────────────────────────────────────────────
 const SafetyTrust = () => (
-  <section className="py-24 md:py-40 bg-secondary relative border-t border-white/5">
+  <section className="py-24 md:py-40 bg-background relative border-t border-white/5">
     <div className="absolute inset-0 electric-grid opacity-10 pointer-events-none" />
     <div className="container mx-auto px-6 relative z-10">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
@@ -988,7 +1063,7 @@ const SafetyTrust = () => (
           viewport={{ once: true, margin: "-100px" }}
         >
           <div className="inline-flex items-center gap-3 px-5 py-2 border border-primary/40 text-primary font-display text-sm tracking-widest uppercase font-bold mb-10">
-            <Shield className="w-4 h-4" /> Safety & Trust
+            <Shield className="w-4 h-4" /> Safety &amp; Trust
           </div>
           <h2 className="font-display text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-8">
             Built for Freedom.<br />
@@ -1014,7 +1089,7 @@ const SafetyTrust = () => (
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className="flex items-start gap-4 p-6 bg-background border border-white/5 hover:border-primary/30 transition-all duration-300 group"
+              className="flex items-start gap-4 p-6 bg-card border border-white/5 hover:border-primary/30 transition-all duration-300 group"
             >
               <div className="text-primary flex-shrink-0 group-hover:scale-110 transition-transform">{item.icon}</div>
               <div>
@@ -1044,7 +1119,8 @@ const Pricing = () => (
         <div className="absolute bottom-0 right-0 w-16 h-16 border-b-4 border-r-4 border-primary" />
         <p className="font-display text-sm uppercase tracking-widest text-primary mb-4 font-bold">Premium Experience. Accessible Membership.</p>
         <h2 className="font-display text-5xl md:text-7xl font-black uppercase tracking-tighter mb-4">The Club Membership</h2>
-        <p className="text-xl md:text-2xl text-muted-foreground font-display tracking-widest uppercase mb-12">Designed to remain accessible for teenagers, young adults, and families.</p>
+        <p className="text-lg md:text-xl text-muted-foreground font-display tracking-widest uppercase mb-2">Designed for teenagers, young adults, families, and lifelong members.</p>
+        <p className="text-base text-muted-foreground font-light mb-12">Technology keeps costs low. Healthy food stays affordable. No hidden fees.</p>
         <div className="font-display text-[8rem] md:text-[12rem] font-black text-primary mb-4 flex justify-center items-baseline leading-none shadow-primary text-glow">
           <span className="text-6xl md:text-8xl -translate-y-10 md:-translate-y-16">$</span>40
           <span className="text-4xl md:text-5xl text-muted-foreground ml-4">/mo</span>
@@ -1064,73 +1140,103 @@ const Pricing = () => (
           ))}
         </ul>
         <Button size="lg" className="w-full md:w-auto text-2xl md:text-4xl px-16 h-20 md:h-24 font-black" onClick={() => document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" })}>
-          Help Us Build the First Clubhouse <ArrowRight className="ml-4 w-10 h-10" />
+          Imagine Your Community <ArrowRight className="ml-4 w-10 h-10" />
         </Button>
       </div>
     </div>
   </section>
 );
 
-// ─── Partnerships ─────────────────────────────────────────────────────────────
-const Partnerships = () => (
-  <section className="py-24 md:py-40 bg-background relative border-t border-white/5 overflow-hidden">
-    <div className="container mx-auto px-6">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center mb-24">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-        >
-          <div className="inline-flex items-center gap-3 px-5 py-2 border border-primary/40 text-primary font-display text-sm tracking-widest uppercase font-bold mb-10">
-            <MapPin className="w-4 h-4" /> Partnerships
+// ─── A Home Base for Teams ────────────────────────────────────────────────────
+const TeamsHomeBase = () => {
+  const teams = [
+    "Football", "Basketball", "Volleyball", "Wrestling",
+    "Baseball", "Track", "Dance", "DECA",
+    "Robotics", "Running Clubs", "Strength Clubs", "College Organizations",
+  ];
+
+  const features = [
+    { icon: <Users className="w-6 h-6" />, label: "Circles", desc: "Every team or org gets their own Circle — a community layer that shapes what members see, join, and compete in." },
+    { icon: <Trophy className="w-6 h-6" />, label: "Leaderboards", desc: "Team leaderboards built around improvement, consistency, and community — not just raw strength." },
+    { icon: <CalendarDays className="w-6 h-6" />, label: "Link Ups", desc: "Coordinate practices, open gyms, study nights, and team hangouts — without the group chat." },
+    { icon: <BookOpen className="w-6 h-6" />, label: "Study Nights", desc: "Tables, Wi-Fi, and quiet focus space. Athletes who study together stay together." },
+    { icon: <Tv className="w-6 h-6" />, label: "Watch Parties", desc: "Bring the whole team for game day. Big screens, community energy, no cover charge." },
+    { icon: <Zap className="w-6 h-6" />, label: "Team Challenges", desc: "Compete together. Drive each other. Challenges that make showing up feel like more than training." },
+  ];
+
+  return (
+    <section className="py-24 md:py-40 bg-background relative border-t border-white/5 overflow-hidden">
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start mb-20 md:mb-32">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            <div className="inline-flex items-center gap-3 px-5 py-2 border border-primary/40 text-primary font-display text-sm tracking-widest uppercase font-bold mb-10">
+              <MapPin className="w-4 h-4" /> Teams &amp; Communities
+            </div>
+            <h2 className="font-display text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-8">
+              A Home Base<br />
+              <span className="text-primary">for Teams.</span>
+            </h2>
+            <p className="text-xl text-muted-foreground font-light leading-relaxed max-w-xl mb-10">
+              Project Clubhouse doesn't compete with the communities already in your area. It extends them — giving every team, club, and organization a place to train, gather, and grow together.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {teams.map((team, i) => (
+                <motion.span
+                  key={i}
+                  initial={{ opacity: 0, scale: 0.85 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.04 }}
+                  className="px-4 py-2 border border-white/10 hover:border-primary/50 hover:text-primary font-display text-sm uppercase tracking-widest font-bold transition-all duration-200 cursor-default"
+                >
+                  {team}
+                </motion.span>
+              ))}
+            </div>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {features.map((f, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className="p-6 bg-card border border-white/5 hover:border-primary/30 transition-all duration-300 group"
+              >
+                <div className="text-primary mb-4 group-hover:scale-110 transition-transform">{f.icon}</div>
+                <h3 className="font-display text-xl font-black uppercase tracking-tight mb-2 group-hover:text-primary transition-colors">{f.label}</h3>
+                <p className="text-muted-foreground text-sm font-light leading-relaxed">{f.desc}</p>
+              </motion.div>
+            ))}
           </div>
-          <h2 className="font-display text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-8">
-            A Home Base for<br />Communities That<br />
-            <span className="text-primary">Already Exist.</span>
-          </h2>
-          <p className="text-xl text-muted-foreground font-light leading-relaxed max-w-xl">
-            Project Clubhouse is designed to support the communities already in your area — not compete with them.
-          </p>
+        </div>
+
+        {/* Full composite vision board */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="relative"
+        >
+          <img
+            src={imgVisionBoard}
+            alt="Project Clubhouse — Full Vision"
+            className="w-full h-auto block"
+          />
+          <div className="absolute bottom-0 left-0 right-0 p-8 flex items-end justify-between bg-gradient-to-t from-background/80 to-transparent pointer-events-none">
+            <span className="font-display text-xs uppercase tracking-widest text-primary font-bold">The Complete Vision · All 5 Zones</span>
+          </div>
         </motion.div>
-
-        <div className="grid grid-cols-2 gap-4">
-          {[
-            "High Schools", "Athletic Teams", "Youth Sports Orgs", "College Clubs",
-            "Local Employers", "Community Orgs", "Health Systems", "Local Sports Media",
-          ].map((partner, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.06 }}
-              className="p-4 md:p-6 bg-card border border-white/5 hover:border-primary/40 hover:text-primary font-display text-base md:text-lg uppercase tracking-wide font-bold transition-all duration-200 text-center"
-            >
-              {partner}
-            </motion.div>
-          ))}
-        </div>
       </div>
-
-      {/* Full composite vision board */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="relative"
-      >
-        <img
-          src={imgVisionBoard}
-          alt="Project Clubhouse — Full Vision"
-          className="w-full h-auto block"
-        />
-        <div className="absolute bottom-0 left-0 right-0 p-8 flex items-end justify-between bg-gradient-to-t from-background/80 to-transparent pointer-events-none">
-          <span className="font-display text-xs uppercase tracking-widest text-primary font-bold">The Complete Vision · All 8 Zones</span>
-        </div>
-      </motion.div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 // ─── Closing: Imagine After School ────────────────────────────────────────────
 const ImagineAfterSchool = () => {
@@ -1196,8 +1302,8 @@ const ImagineAfterSchool = () => {
               <Button size="lg" className="text-xl px-10 h-16 font-black" onClick={() => document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" })}>
                 Help Us Build the First Clubhouse <ArrowRight className="ml-3 w-6 h-6" />
               </Button>
-              <Button size="lg" variant="outline" className="text-xl px-10 h-16 font-black border-white/20 hover:border-primary hover:text-primary" onClick={() => document.getElementById("vision")?.scrollIntoView({ behavior: "smooth" })}>
-                Explore the Vision
+              <Button size="lg" variant="outline" className="text-xl px-10 h-16 font-black border-white/20 hover:border-primary hover:text-primary" onClick={() => document.getElementById("spaces")?.scrollIntoView({ behavior: "smooth" })}>
+                Walk Through the Spaces
               </Button>
             </div>
           </motion.div>
@@ -1225,13 +1331,13 @@ const FounderWall = () => (
         </h2>
 
         <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto mb-16">
-          This is Version 1 of Project Clubhouse. Over the coming months, we will refine the club, the app, and the experience — with input from future members, parents, athletes, and coaches.
+          This is Version 1. The club, the app, and the experience will grow with input from future members, parents, athletes, and coaches.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 text-left">
           {[
             { label: "The Club", desc: "Physical location. Equipment. Zones. Community spaces. Coming to your area." },
-            { label: "PrimalTrack", desc: "The digital layer that powers everything — presence, Link Ups, leaderboards, and Circles." },
+            { label: "PrimalTrack", desc: "The digital layer that powers presence, Link Ups, leaderboards, and Circles." },
             { label: "The Community", desc: "Events, challenges, member milestones. The thing that makes people keep showing up." },
           ].map((item, i) => (
             <motion.div
@@ -1309,7 +1415,7 @@ const WaitlistForm = () => {
             <span className="text-primary">Build This.</span>
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed mb-16 max-w-2xl">
-            We're actively building Project Clubhouse and looking for people who want to shape what it becomes. Drop your name and email — founding members will be the first to hear about location, pricing, and early access.
+            We're building Project Clubhouse and looking for people who want to shape what it becomes. Drop your name and email — founding members hear about location, pricing, and early access first.
           </p>
 
           {status === "success" ? (
@@ -1463,7 +1569,7 @@ export default function Home() {
       <LinkUps />
 
       {/* Chapter 04 — The Digital Layer */}
-      <Marquee text="DIGITAL AMPLIFIES REAL LIFE • THE CLUB IN YOUR POCKET" />
+      <Marquee text="THE CLUB IN YOUR POCKET • COMMUNITY FIRST • DIGITAL AMPLIFIES REAL LIFE" />
       <ChapterDivider num="04" title="The Digital Layer" />
       <MotivationEngine />
       <Flywheel />
@@ -1474,13 +1580,14 @@ export default function Home() {
       {/* Chapter 05 — Built For You */}
       <ChapterDivider num="05" title="Built For You" />
       <WhoIsThisFor />
+      <BuiltForParents />
       <SafetyTrust />
+      <TeamsHomeBase />
 
       {/* Chapter 06 — Membership */}
-      <Marquee text="PREMIUM EXPERIENCE • ACCESSIBLE MEMBERSHIP • FITNESS IS OUR COMMON GROUND" reverse />
+      <Marquee text="PREMIUM EXPERIENCE • ACCESSIBLE MEMBERSHIP • $40 A MONTH • NO HIDDEN FEES" reverse />
       <ChapterDivider num="06" title="Membership" />
       <Pricing />
-      <Partnerships />
 
       {/* Close */}
       <ImagineAfterSchool />

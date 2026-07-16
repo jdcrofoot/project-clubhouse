@@ -1,0 +1,414 @@
+Project Clubhouse Website – Phase 5: Refine the Story, Not the Features
+Context
+
+The website has reached a strong point visually and structurally.
+
+This phase is not a redesign.
+
+It is a refinement.
+
+The goal is to make the website feel less like a product demo and more like the beginning of a movement.
+
+Everything should become simpler, more emotional, and more memorable.
+
+Do not remove the existing design language.
+
+Preserve:
+
+Overall architecture
+Color palette
+Typography
+Motion
+Components
+Existing pages
+Existing responsive behavior
+
+This phase should focus on improving storytelling, hierarchy, copywriting, and emotional impact.
+
+Guiding Principle
+
+Stop selling features.
+
+Start selling transformation.
+
+Every section should answer:
+
+How does Project Clubhouse improve someone's life?
+
+Not:
+
+"What features do we have?"
+
+Rewrite Every Section Around Outcomes
+
+Instead of leading with product features, lead with emotional benefits.
+
+Examples:
+
+Instead of:
+
+Club Live
+
+Use:
+
+Never wonder who's here again.
+
+Instead of:
+
+Link Ups
+
+Use:
+
+Make plans in seconds.
+
+Instead of:
+
+Circles
+
+Use:
+
+Find your people.
+
+Instead of:
+
+Progress Tracking
+
+Use:
+
+See how far you've come.
+
+Instead of:
+
+Fuel Station
+
+Use:
+
+Healthy shouldn't cost $12.
+
+Instead of:
+
+Performance Floor
+
+Use:
+
+Where beginners feel welcome and athletes feel challenged.
+
+Instead of:
+
+Sports Lounge
+
+Use:
+
+The place you'll still be sitting two hours after your workout.
+
+Instead of:
+
+Outdoor Patio
+
+Use:
+
+Some of the best conversations happen after the workout ends.
+
+The emotional headline should always appear before the explanation.
+
+Reduce Copy
+
+The website currently explains too much.
+
+Reduce written copy approximately 20–25%.
+
+Replace paragraphs with:
+
+stronger headlines
+larger visuals
+concise supporting text
+
+Trust the visuals to tell more of the story.
+
+Create more breathing room throughout the site.
+
+Strengthen the Hero
+
+Keep:
+
+MORE THAN A GYM. THE PLACE TO SHOW UP.
+
+Do not change this headline.
+
+Improve the supporting copy.
+
+The hero should immediately communicate:
+
+A modern community built around fitness.
+
+Not simply another gym.
+
+Fitness is the invitation.
+
+Belonging is the reason people stay.
+
+Reframe the PrimalTrack Section
+
+Do not introduce PrimalTrack as "our app."
+
+Instead introduce it as:
+
+The Club, In Your Pocket.
+
+Lead with:
+
+Most fitness apps tell you what you did yesterday.
+
+This one helps you decide where you'll be tonight.
+
+Then explain:
+
+Train
+Progress
+Compete
+Club Live
+Link Ups
+Your People
+
+The emphasis should be community rather than workout logging.
+
+Add a New Section
+Built for Parents. Loved by Teenagers.
+
+This should become one of the strongest sections on the site.
+
+Explain that parents receive something incredibly valuable:
+
+A safe place where teenagers actually want to spend time.
+
+Illustrate:
+
+School ends.
+
+Workout.
+
+Homework.
+
+Healthy food.
+
+Friends.
+
+Mentors.
+
+Games.
+
+Community.
+
+Then home.
+
+Avoid fear-based messaging.
+
+Focus on confidence and peace of mind.
+
+Add Another Section
+A Home Base for Teams
+
+Explain how Project Clubhouse supports existing communities.
+
+Examples:
+
+Football
+
+Basketball
+
+Volleyball
+
+Wrestling
+
+Baseball
+
+Track
+
+Dance
+
+DECA
+
+Robotics
+
+Running Clubs
+
+Strength Clubs
+
+College Organizations
+
+Use:
+
+Circles
+
+Leaderboards
+
+Link Ups
+
+Study Nights
+
+Watch Parties
+
+Team Challenges
+
+Present this as extending communities rather than replacing them.
+
+Improve Visual Hierarchy
+
+Use larger photography.
+
+Fewer text blocks.
+
+Increase spacing between sections.
+
+Create more cinematic transitions.
+
+Let the architecture breathe.
+
+Improve Image Usage
+
+Current imagery should feel more candid.
+
+Less posed.
+
+More interaction.
+
+Examples:
+
+Spotting a lift.
+
+Studying together.
+
+Watching a game.
+
+Parents talking.
+
+Mentors helping younger athletes.
+
+Friends creating a Link Up.
+
+People laughing after basketball.
+
+Avoid stock-photo energy.
+
+Simplify Membership Messaging
+
+Membership should feel accessible.
+
+Not premium-exclusive.
+
+Communicate:
+
+Premium experience.
+
+Accessible pricing.
+
+Technology keeps costs low.
+
+Healthy food stays affordable.
+
+Designed for teenagers, young adults, families and lifelong members.
+
+Add a Vision Section
+
+Near the end of the site.
+
+Title:
+
+Imagine After School.
+
+Describe one afternoon.
+
+Football teammates.
+
+Mentor.
+
+Study group.
+
+Workout.
+
+Protein shake.
+
+Pickup basketball.
+
+Watching the game.
+
+Heading home.
+
+Keep it emotional.
+
+One page.
+
+Minimal text.
+
+Refine Calls to Action
+
+Replace generic CTAs.
+
+Instead of:
+
+Learn More
+
+Use:
+
+Explore the Club
+
+See the Vision
+
+Walk Through the Spaces
+
+Discover PrimalTrack
+
+Imagine Your Community
+
+The language should feel aspirational.
+
+Preserve Simplicity
+
+Do NOT add more features.
+
+Do NOT add more pages unless necessary.
+
+Improve clarity instead of increasing complexity.
+
+Final Website Test
+
+After implementation, a first-time visitor should leave believing:
+
+This is not another gym.
+This is where people naturally spend time.
+Fitness is only part of the experience.
+The technology strengthens the real-world community.
+Parents would trust it.
+Teenagers would actually choose it.
+The concept feels achievable rather than overly luxurious.
+
+The website should create one lasting impression:
+
+"I wish this existed when I was growing up—and I'd join today."
+
+Before Implementing
+
+Please provide:
+
+The sections you recommend changing.
+A short explanation of why.
+Updated copy for review.
+Then implement once approved.
+One More Thing...
+
+I think you're exactly right to revisit the names.
+
+And I don't think this is just a branding exercise.
+
+It's a positioning exercise.
+
+Six weeks ago, "Project Clubhouse" and "PrimalTrack" made sense because we thought we were building a fitness concept with a fitness app.
+
+Now we're building something much broader:
+
+a physical destination,
+a digital community,
+a network,
+and eventually, I think, a brand that people identify with.
+
+I actually think the company name, the club name, and the app name should be designed together as one cohesive system rather than independently. I have a lot of ideas there—including some directions that are much stronger than either current name—but I would treat that as its own strategic workshop. If we get those right, they'll carry this vision for decades.
