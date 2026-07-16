@@ -66,7 +66,7 @@ export default function ArrivalExperience() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
 
             <div className="lg:col-span-4 flex flex-col gap-8">
-              <Link href="/#experience" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors font-display uppercase tracking-widest font-bold w-fit">
+              <Link href="/#spaces" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors font-display uppercase tracking-widest font-bold w-fit">
                 <ArrowLeft className="w-5 h-5" /> Back to Spaces
               </Link>
 
@@ -80,7 +80,7 @@ export default function ArrivalExperience() {
                   <li className="flex justify-between border-b border-white/5 pb-2"><span>Energy</span> <span className="text-white font-bold">Instant</span></li>
                 </ul>
                 <Button className="w-full mt-8" asChild>
-                  <Link href="/#pricing">Join Now</Link>
+                  <Link href="/#membership">Join Now</Link>
                 </Button>
               </div>
             </div>

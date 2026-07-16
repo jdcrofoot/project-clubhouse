@@ -63,7 +63,7 @@ export const Navbar = () => {
               {link.label}
             </button>
           ))}
-          <Button onClick={() => handleNavClick("pricing")}>Join Now</Button>
+          <Button onClick={() => handleNavClick("membership")}>Join Now</Button>
         </div>
 
         {/* Mobile Nav Toggle */}
@@ -89,7 +89,7 @@ export const Navbar = () => {
           ))}
           <Button
             className="w-full text-xl py-6"
-            onClick={() => handleNavClick("pricing")}
+            onClick={() => handleNavClick("membership")}
           >
             Join Now
           </Button>

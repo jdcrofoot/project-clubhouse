@@ -80,7 +80,7 @@ export default function FuelStation() {
                   <li className="flex justify-between border-b border-white/5 pb-2"><span>Payment</span> <span className="text-white font-bold">Apple Pay</span></li>
                 </ul>
                 <Button className="w-full mt-8" asChild>
-                  <Link href="/#pricing">Join Now</Link>
+                  <Link href="/#membership">Join Now</Link>
                 </Button>
               </div>
             </div>

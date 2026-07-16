@@ -80,7 +80,7 @@ export default function Clubhouse() {
                   <li className="flex justify-between border-b border-white/5 pb-2"><span>Wifi</span> <span className="text-white font-bold">Gigabit Free</span></li>
                 </ul>
                 <Button className="w-full mt-8" asChild>
-                  <Link href="/#pricing">Join Now</Link>
+                  <Link href="/#membership">Join Now</Link>
                 </Button>
               </div>
             </div>
