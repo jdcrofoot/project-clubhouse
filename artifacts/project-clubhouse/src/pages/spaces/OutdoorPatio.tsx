@@ -4,7 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Flame, Zap, CheckCircle2 } from "lucide-react";
 import { Link } from "wouter";
-const imgOutdoorPatio = "/images/Project-Clubhouse-Replit-Image-Library/02-pilot/03-outdoor/pc-pilot-outdoor-04.png";
+const imgOutdoorPatio = "/images/vb-outdoor-patio.png";
 
 export default function OutdoorPatio() {
   useEffect(() => {

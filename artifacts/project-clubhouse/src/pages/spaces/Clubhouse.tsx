@@ -4,7 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, MonitorPlay, Zap, CheckCircle2 } from "lucide-react";
 import { Link } from "wouter";
-const imgClubhouse = "/images/Project-Clubhouse-Replit-Image-Library/02-pilot/07-sportsbook/pc-pilot-sportsbook-a-01.png";
+const imgClubhouse = "/images/vb-clubhouse.png";
 
 export default function Clubhouse() {
   useEffect(() => {
