@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
   Dumbbell, ArrowRight, Zap, Target, Users, Flame, Activity, CheckCircle2,
   BookOpen, Tv, CalendarDays, Coffee, Heart, Trophy, TrendingUp, Medal,
   Star, Gift, Ticket, RefreshCw, RotateCcw, Wifi, Shield, Smartphone,
-  Play, Eye, UserCheck, Bell, MapPin, Lock,
+  Play, Eye, UserCheck, Bell, MapPin, Lock, Send, Loader2,
 } from "lucide-react";
 
 import { Navbar } from "@/components/Navbar";
@@ -1063,7 +1063,7 @@ const Pricing = () => (
             </li>
           ))}
         </ul>
-        <Button size="lg" className="w-full md:w-auto text-2xl md:text-4xl px-16 h-20 md:h-24 font-black">
+        <Button size="lg" className="w-full md:w-auto text-2xl md:text-4xl px-16 h-20 md:h-24 font-black" onClick={() => document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" })}>
           Help Us Build the First Clubhouse <ArrowRight className="ml-4 w-10 h-10" />
         </Button>
       </div>
@@ -1193,7 +1193,7 @@ const ImagineAfterSchool = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="text-xl px-10 h-16 font-black" onClick={() => document.getElementById("membership")?.scrollIntoView({ behavior: "smooth" })}>
+              <Button size="lg" className="text-xl px-10 h-16 font-black" onClick={() => document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" })}>
                 Help Us Build the First Clubhouse <ArrowRight className="ml-3 w-6 h-6" />
               </Button>
               <Button size="lg" variant="outline" className="text-xl px-10 h-16 font-black border-white/20 hover:border-primary hover:text-primary" onClick={() => document.getElementById("vision")?.scrollIntoView({ behavior: "smooth" })}>
@@ -1257,6 +1257,148 @@ const FounderWall = () => (
   </section>
 );
 
+// ─── Waitlist / Interest Form ─────────────────────────────────────────────────
+const WaitlistForm = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [note, setNote] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("loading");
+    setErrorMsg("");
+
+    try {
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, note }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setErrorMsg(data.error || "Something went wrong. Please try again.");
+        setStatus("error");
+      } else {
+        setStatus("success");
+      }
+    } catch {
+      setErrorMsg("Network error. Please check your connection and try again.");
+      setStatus("error");
+    }
+  };
+
+  return (
+    <section id="waitlist" className="py-24 md:py-40 bg-background relative overflow-hidden border-t border-primary/20">
+      <div className="absolute inset-0 electric-grid opacity-10 pointer-events-none" />
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 text-[15rem] md:text-[22rem] font-display font-black text-stroke-white opacity-5 whitespace-nowrap pointer-events-none select-none leading-none">
+        JOIN
+      </div>
+      <div className="container mx-auto px-6 relative z-10 max-w-3xl">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <div className="inline-flex items-center gap-3 px-5 py-2 border border-primary/40 text-primary font-display text-sm tracking-widest uppercase font-bold mb-10">
+            <Send className="w-4 h-4" /> Be a Founding Member
+          </div>
+          <h2 className="font-display text-5xl md:text-7xl lg:text-[8rem] font-black uppercase tracking-tighter leading-none mb-6">
+            Help Us<br />
+            <span className="text-primary">Build This.</span>
+          </h2>
+          <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed mb-16 max-w-2xl">
+            We're actively building Project Clubhouse and looking for people who want to shape what it becomes. Drop your name and email — founding members will be the first to hear about location, pricing, and early access.
+          </p>
+
+          {status === "success" ? (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="border border-primary/40 bg-primary/5 p-12 text-center"
+            >
+              <CheckCircle2 className="w-16 h-16 text-primary mx-auto mb-6" />
+              <h3 className="font-display text-4xl md:text-5xl font-black uppercase tracking-tight mb-4 text-primary">You're On The List.</h3>
+              <p className="text-xl text-muted-foreground font-light leading-relaxed">
+                We'll reach out as things come together. Thanks for believing in this early.
+              </p>
+            </motion.div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label className="block font-display text-xs uppercase tracking-widest text-muted-foreground font-bold mb-3">
+                    Your Name
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    placeholder="First & Last Name"
+                    className="w-full bg-card border border-white/10 focus:border-primary/60 outline-none px-5 py-4 font-display text-lg text-white placeholder:text-white/30 transition-colors duration-200"
+                  />
+                </div>
+                <div>
+                  <label className="block font-display text-xs uppercase tracking-widest text-muted-foreground font-bold mb-3">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="you@example.com"
+                    className="w-full bg-card border border-white/10 focus:border-primary/60 outline-none px-5 py-4 font-display text-lg text-white placeholder:text-white/30 transition-colors duration-200"
+                  />
+                </div>
+              </div>
+              <div>
+                <label className="block font-display text-xs uppercase tracking-widest text-muted-foreground font-bold mb-3">
+                  Anything You Want Us To Know <span className="text-white/30">(Optional)</span>
+                </label>
+                <textarea
+                  value={note}
+                  onChange={(e) => setNote(e.target.value)}
+                  placeholder="Who you are, why you're interested, what you'd love to see..."
+                  rows={4}
+                  maxLength={500}
+                  className="w-full bg-card border border-white/10 focus:border-primary/60 outline-none px-5 py-4 font-display text-base text-white placeholder:text-white/30 transition-colors duration-200 resize-none"
+                />
+              </div>
+
+              {status === "error" && (
+                <p className="text-red-400 font-display text-sm uppercase tracking-widest font-bold">{errorMsg}</p>
+              )}
+
+              <Button
+                type="submit"
+                size="lg"
+                disabled={status === "loading"}
+                className="w-full text-xl md:text-2xl h-16 md:h-20 font-black"
+              >
+                {status === "loading" ? (
+                  <>
+                    <Loader2 className="mr-3 w-6 h-6 animate-spin" /> Submitting...
+                  </>
+                ) : (
+                  <>
+                    I Want In <ArrowRight className="ml-3 w-6 h-6" />
+                  </>
+                )}
+              </Button>
+              <p className="text-center text-sm text-muted-foreground font-display uppercase tracking-widest">
+                No spam. No pressure. Just early access when it's ready.
+              </p>
+            </form>
+          )}
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
 // ─── Footer ───────────────────────────────────────────────────────────────────
 const Footer = () => (
   <footer className="bg-secondary py-24 md:py-32 text-center relative overflow-hidden border-t border-primary/20">
@@ -1278,9 +1420,9 @@ const Footer = () => (
       <div className="w-full mt-32 pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-8 text-muted-foreground font-display text-xl uppercase tracking-widest font-bold">
         <p>&copy; {new Date().getFullYear()} Project Clubhouse. All Rights Reserved.</p>
         <div className="flex gap-8">
-          <a href="#" className="hover:text-primary transition-colors">Instagram</a>
-          <a href="#" className="hover:text-primary transition-colors">TikTok</a>
-          <a href="#" className="hover:text-primary transition-colors">Contact</a>
+          <a href="https://www.instagram.com/projectclubhouse" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Instagram</a>
+          <a href="https://www.tiktok.com/@projectclubhouse" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">TikTok</a>
+          <button onClick={() => document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" })} className="hover:text-primary transition-colors cursor-pointer">Contact</button>
         </div>
       </div>
     </div>
@@ -1343,6 +1485,7 @@ export default function Home() {
       {/* Close */}
       <ImagineAfterSchool />
       <FounderWall />
+      <WaitlistForm />
       <Footer />
     </div>
   );

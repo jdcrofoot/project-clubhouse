@@ -20,7 +20,7 @@ const phases = [
       { label: "Finalize zone layouts and equipment list", done: false },
       { label: "Identify first location / market", done: false },
       { label: "Develop founding member pricing strategy", done: false },
-      { label: "Build community waitlist", done: false },
+      { label: "Build community waitlist", done: true },
     ],
   },
   {
