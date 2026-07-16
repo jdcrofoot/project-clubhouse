@@ -4,7 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Star, Zap, CheckCircle2 } from "lucide-react";
 import { Link } from "wouter";
-import imgArrival from "@assets/15EB68E0-3FA6-46B6-BD2D-7537459C86F8_1784062882601.png";
+const imgArrival = "/images/Project-Clubhouse-Replit-Image-Library/02-pilot/01-core/pc-pilot-core-04.png";
 
 export default function ArrivalExperience() {
   useEffect(() => {

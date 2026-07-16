@@ -12,15 +12,19 @@ import { Navbar } from "@/components/Navbar";
 import { Link } from "wouter";
 
 import imgHero from "@assets/15EB68E0-3FA6-46B6-BD2D-7537459C86F8_1784062882601.png";
-import imgArrival from "@assets/15EB68E0-3FA6-46B6-BD2D-7537459C86F8_1784062882601.png";
-import imgPerformanceFloor from "@assets/ChatGPT_Image_Jul_14,_2026,_12_51_10_PM_1784052604352.png";
-import imgClubhouse from "@assets/ChatGPT_Image_Jul_14,_2026,_12_51_02_PM_1784052604353.png";
-import imgFuelStation from "@assets/ChatGPT_Image_Jul_14,_2026,_12_51_25_PM_1784052604352.png";
-import imgOutdoorPatio from "@assets/ChatGPT_Image_Jul_14,_2026,_12_51_18_PM_1784052604352.png";
-import imgAppInfo from "@assets/ChatGPT_Image_Jul_14,_2026,_12_50_45_PM_1784052604353.png";
-import imgSupport2 from "@assets/ChatGPT_Image_Jul_14,_2026,_12_50_45_PM_1784052604353.png";
-import imgSupport3 from "@assets/ChatGPT_Image_Jul_14,_2026,_12_50_33_PM_1784052604354.png";
-import imgVisionBoard from "@assets/ChatGPT_Image_Jul_15,_2026,_03_40_44_PM_1784148739754.png";
+
+// ─── Image Library (pilot location) ──────────────────────────────────────────
+const BASE = "/images/Project-Clubhouse-Replit-Image-Library";
+const imgArrival        = `${BASE}/02-pilot/01-core/pc-pilot-core-04.png`;
+const imgPerformanceFloor = `${BASE}/02-pilot/01-core/pc-pilot-core-01.png`;
+const imgClubhouse      = `${BASE}/02-pilot/07-sportsbook/pc-pilot-sportsbook-b-02.png`;
+const imgFuelStation    = `${BASE}/02-pilot/06-fuel-connections/pc-pilot-fuel-connection-02.png`;
+const imgOutdoorPatio   = `${BASE}/02-pilot/03-outdoor/pc-pilot-outdoor-01.png`;
+// PrimalTrack — approved aspirational exception (app tech available in pilot)
+const imgAppInfo        = `${BASE}/01-aspirational/04-app-pulse/pc-app-01-log-lift-phone.png`;
+const imgSupport2       = `${BASE}/02-pilot/07-sportsbook/pc-pilot-sportsbook-a-02.png`;
+const imgSupport3       = `${BASE}/02-pilot/06-fuel-connections/pc-pilot-fuel-connection-03.png`;
+const imgVisionBoard    = `${BASE}/02-pilot/07-sportsbook/pc-pilot-sportsbook-c-04.png`;
 
 // ─── Hero ────────────────────────────────────────────────────────────────────
 const Hero = () => {
@@ -601,7 +605,7 @@ const MotivationEngine = () => {
             <div className="absolute inset-0 bg-primary/20 blur-[120px] rounded-full" />
             <img
               src={imgAppInfo}
-              alt="PrimalTrack — The Club In Your Pocket"
+              alt="Teen logging a lift on the PrimalTrack app at the squat rack"
               className="relative z-10 w-full max-w-lg mx-auto rounded-xl border-4 border-white/5 shadow-2xl shadow-black/80 hover:-translate-y-4 hover:shadow-[0_20px_50px_rgba(198,255,0,0.3)] transition-all duration-500"
             />
           </div>
@@ -956,8 +960,8 @@ const WhoIsThisFor = () => (
       </motion.div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
         <div className="grid grid-cols-2 gap-4 md:gap-8">
-          <motion.img initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} src={imgSupport2} alt="Community Training" className="object-cover w-full h-64 md:h-96 grayscale hover:grayscale-0 transition-all duration-500" />
-          <motion.img initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} src={imgSupport3} alt="Clubhouse Community" className="object-cover w-full h-64 md:h-96 mt-12 md:mt-24 grayscale hover:grayscale-0 transition-all duration-500" />
+          <motion.img initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} src={imgSupport2} alt="Members socializing, studying, and hanging out in the Project Clubhouse lounge" className="object-cover w-full h-64 md:h-96 grayscale hover:grayscale-0 transition-all duration-500" />
+          <motion.img initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} src={imgSupport3} alt="The Project Clubhouse ecosystem — study tables, fuel station, and lounge connected in one space" className="object-cover w-full h-64 md:h-96 mt-12 md:mt-24 grayscale hover:grayscale-0 transition-all duration-500" />
         </div>
         <div className="space-y-10">
           {[
@@ -1226,8 +1230,9 @@ const TeamsHomeBase = () => {
         >
           <img
             src={imgVisionBoard}
-            alt="Project Clubhouse — Full Vision"
-            className="w-full h-auto block"
+            alt="Coach leading a team film and playbook session in the Project Clubhouse sportsbook room"
+            className="w-full rounded-sm object-cover object-center"
+            style={{ aspectRatio: "16/9" }}
           />
           <div className="absolute bottom-0 left-0 right-0 p-8 flex items-end justify-between bg-gradient-to-t from-background/80 to-transparent pointer-events-none">
             <span className="font-display text-xs uppercase tracking-widest text-primary font-bold">The Complete Vision · All 5 Zones</span>

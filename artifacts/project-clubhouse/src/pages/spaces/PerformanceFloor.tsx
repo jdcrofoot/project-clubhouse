@@ -4,7 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Dumbbell, Zap, CheckCircle2 } from "lucide-react";
 import { Link } from "wouter";
-import imgPerformanceFloor from "@assets/ChatGPT_Image_Jul_14,_2026,_12_51_10_PM_1784052604352.png";
+const imgPerformanceFloor = "/images/Project-Clubhouse-Replit-Image-Library/02-pilot/04-workout-pulse/pc-pilot-workout-pulse-03.png";
 
 export default function PerformanceFloor() {
   useEffect(() => {

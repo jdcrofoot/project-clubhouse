@@ -4,7 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Coffee, Zap, CheckCircle2 } from "lucide-react";
 import { Link } from "wouter";
-import imgFuelStation from "@assets/ChatGPT_Image_Jul_14,_2026,_12_51_25_PM_1784052604352.png";
+const imgFuelStation = "/images/Project-Clubhouse-Replit-Image-Library/02-pilot/06-fuel-connections/pc-pilot-fuel-connection-01.png";
 
 export default function FuelStation() {
   useEffect(() => {
